@@ -2,7 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/Mannschaft">Mannschaft</router-link>
     </div>
     <router-view />
   </div>
@@ -20,9 +21,9 @@
   padding: 30px;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #293038;
     &.router-link-exact-active {
-      color: #42b983;
+      color: #11ca30;
     }
   }
 }
@@ -30,6 +31,11 @@
 
 <style scoped>
 .home {
-  color: aqua;
+  color: #000;
+}
+.mannschaft {
+  color: #000;
+  height: 100px;
+  background-color: #20d164;
 }
 </style>
