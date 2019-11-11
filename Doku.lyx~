@@ -178,7 +178,8 @@ Tag 2: 04.11.2019
 \end_layout
 
 \begin_layout Itemize
-erstellen Git Repository, verknüpfen des Projektes mit Github
+erstellen Git Repository, verknüpfen des Projektes mit Github -> Steiniger
+ Weg das hinzubekommen ohne Hilfe
 \end_layout
 
 \begin_layout Itemize
@@ -198,11 +199,15 @@ vertraut machen mit der Projektumgebung in Visual Studio Code
 \end_layout
 
 \begin_layout Itemize
-erste Änderung des Standartprojektes
+erste Änderung des Standartprojektes -> In Vue reinzukommen ist echt anstrengend
+, obwohl ich schon HTML, CSS, JS recht gut beherrsche.
+ Erinnert an C++ und Klassen
 \end_layout
 
 \begin_layout Itemize
 eventuell mögliche API: https://www.programmableweb.com/api/bundesliga-live-scores
+ -> sieht allerdings sehr kompliziert aus und wir kennen die Funktionalität
+ und die Aktualität nicht
 \end_layout
 
 \end_body
