@@ -210,5 +210,30 @@ eventuell mögliche API: https://www.programmableweb.com/api/bundesliga-live-sco
  und die Aktualität nicht
 \end_layout
 
+\begin_layout Section
+Tag 3: 11.11.2019
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Problem
+\begin_inset Quotes erd
+\end_inset
+
+ mit Git commits -> konnte nicht commiten obwohl Änderungen erkannt wurden
+ -> hat mich sehr verwirrt
+\end_layout
+
+\begin_layout Itemize
+Lösung war recht simple -> musste vorher sagen welche Files er commiten
+ soll -> git add -A (alle)
+\end_layout
+
+\begin_layout Itemize
+
+\end_layout
+
 \end_body
 \end_document
