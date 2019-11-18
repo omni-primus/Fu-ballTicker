@@ -55,6 +55,10 @@
         <input id="FCK" type="checkbox" name="FCK" />
         <label for="FCK">1. FC Köln</label>
         <br />
+        <input id="FCS04" type="checkbox" name="FCS04" />
+        <label for="FCS04">FC Schalke 04</label>
+        <br />
+        LLOLOOLOLO
       </details>
     </div>
   </div>
