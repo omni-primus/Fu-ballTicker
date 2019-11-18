@@ -210,5 +210,272 @@ eventuell mögliche API: https://www.programmableweb.com/api/bundesliga-live-sco
  und die Aktualität nicht
 \end_layout
 
+\begin_layout Section
+Tag 3: 11.11.2019
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Problem
+\begin_inset Quotes erd
+\end_inset
+
+ mit Git commits -> konnte nicht commiten obwohl Änderungen erkannt wurden
+ -> hat mich sehr verwirrt
+\end_layout
+
+\begin_layout Itemize
+Lösung war recht simple -> musste vorher sagen welche Files er commiten
+ soll -> git add -A (alle)
+\end_layout
+
+\begin_layout Section
+Tag 4 18.11.2019
+\end_layout
+
+\begin_layout Itemize
+neuen Branch erstellt -> offizielle GitHub Seite hat vergessen zu erwähnen
+ wie man den Branch 
+\begin_inset Quotes eld
+\end_inset
+
+pushed
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+versuche eine funktion zu schreiben die beim ersten aufruf der seite einen
+ bestimmten div sichtbar macht, sonst ausblendet
+\end_layout
+
+\begin_layout Itemize
+zuerst hab ich versucht einen Cookie zu setzten und damit zu checken ob
+ man die Seite schonmal besucht hat
+\end_layout
+
+\begin_layout Itemize
+mit beforeMount soll er am Anfang gucken, ob ein Cookie gesetzt ist, wenn
+ nicht -> zeigt er den div an
+\end_layout
+
+\begin_layout Itemize
+danach setzt er einen neuen Cookie
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<div id="erster" style=
+\begin_inset Quotes erd
+\end_inset
+
+display=
+\begin_inset Quotes erd
+\end_inset
+
+none
+\begin_inset Quotes erd
+\end_inset
+
+>
+\end_layout
+
+\begin_layout Plain Layout
+
+	<p>Text</p>
+\end_layout
+
+\begin_layout Plain Layout
+
+</div>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+methods: {
+\end_layout
+
+\begin_layout Plain Layout
+
+	GetCookie: function(name){
+\end_layout
+
+\begin_layout Plain Layout
+
+		var arg = name + "=";
+\end_layout
+
+\begin_layout Plain Layout
+
+		var alen = arg.length;
+\end_layout
+
+\begin_layout Plain Layout
+
+        var clen = document.cookie.length;
+\end_layout
+
+\begin_layout Plain Layout
+
+        var i = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+        while (i < clen) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            var j = i + alen;
+\end_layout
+
+\begin_layout Plain Layout
+
+               if (document.cookie.substring(i, j) == arg)
+\end_layout
+
+\begin_layout Plain Layout
+
+                    return "here";
+\end_layout
+
+\begin_layout Plain Layout
+
+                i = document.cookie.indexOf(" ", i) + 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+                if (i == 0)
+\end_layout
+
+\begin_layout Plain Layout
+
+                     break;
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        return null;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	showfirst: function(){
+\end_layout
+
+\begin_layout Plain Layout
+
+		let erster = document.getElementById("#erster");
+\end_layout
+
+\begin_layout Plain Layout
+
+	    erster.style.display = "inline";
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	beforeMount: function(){
+\end_layout
+
+\begin_layout Plain Layout
+
+		let visit = GetCookie("COOKIE1");
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (visit == null){
+\end_layout
+
+\begin_layout Plain Layout
+
+        	showfirst();
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+	    let expire=new Date();
+\end_layout
+
+\begin_layout Plain Layout
+
+	    expire = new Date(expire.getTime() + 7776000000);
+\end_layout
+
+\begin_layout Plain Layout
+
+	    document.cookie="COOKIE1=here; expires=" + expire;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+ich bekomme zwar kein fehler aber es funktioniert nicht -> nach frustration
+ erstmal bei seite gelegt
+\end_layout
+
 \end_body
 \end_document

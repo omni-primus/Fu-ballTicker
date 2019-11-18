@@ -1,6 +1,12 @@
 <template>
   <div class="home">
     <start msg="Fußball Ticker App" />
+    <div id="erster" style="">
+      <p>
+        Diesen Text solltest du nur sehen wenn du das erste mal auf der Seite
+        bist.
+      </p>
+    </div>
     <div id="selection">
       <details id="bundesliga">
         <summary>Bundesliga</summary>
@@ -58,12 +64,10 @@
         <input id="FCS04" type="checkbox" name="FCS04" />
         <label for="FCS04">FC Schalke 04</label>
         <br />
-        LLOLOOLOLO
       </details>
     </div>
   </div>
 </template>
-
 <script>
 // @ is an alias to /src
 import Start from "@/components/start.vue";
@@ -72,6 +76,34 @@ export default {
   name: "Home",
   components: {
     Start
+  },
+  methods: {
+    showfirst: function() {
+      let erster = document.getElementById("#erster");
+      erster.style.display = "none";
+    },
+    GetCookie: function(name) {
+      var arg = name + "=";
+      var alen = arg.length;
+      var clen = document.cookie.length;
+      var i = 0;
+      while (i < clen) {
+        var j = i + alen;
+        if (document.cookie.substring(i, j) == arg) return "here";
+        i = document.cookie.indexOf(" ", i) + 1;
+        if (i == 0) break;
+      }
+      return null;
+    }
+  },
+  ready: function() {
+    var visit = this.GetCookie("COOKIE1");
+    if (visit == null) {
+      this.showfirst();
+    }
+    var expire = new Date();
+    expire = new Date(expire.getTime() + 7776000000);
+    document.cookie = "COOKIE1=here; expires = " + expire;
   }
 };
 </script>

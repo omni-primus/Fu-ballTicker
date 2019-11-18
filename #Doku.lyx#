@@ -472,42 +472,11 @@ methods: {
 
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-ich bekomme zwar kein fehler aber es funktioniert nicht 
+ich bekomme zwar kein fehler aber es funktioniert nicht
 \end_layout
 
-\begin_layout Itemize
-Chrome sagt mir, dass 
-\begin_inset Quotes eld
-\end_inset
-
-style of null
-\begin_inset Quotes erd
-\end_inset
-
- nicht lesen kann -> vermute, dass das Objekt noch nicht erstellt ist und
- er demnach den style nicht ändern kann
-\end_layout
-
-\begin_layout Itemize
-mit 
-\begin_inset Quotes eld
-\end_inset
-
-ready:
-\begin_inset Quotes erd
-\end_inset
-
- statt 
-\begin_inset Quotes eld
-\end_inset
-
-beforeMount
-\begin_inset Quotes erd
-\end_inset
-
- ist der Fehler zwar weg, aber funktionieren tut es trotzdem nicht
-\end_layout
-
+\end_deeper
 \end_body
 \end_document
