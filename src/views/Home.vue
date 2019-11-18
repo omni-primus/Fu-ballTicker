@@ -58,12 +58,10 @@
         <input id="FCS04" type="checkbox" name="FCS04" />
         <label for="FCS04">FC Schalke 04</label>
         <br />
-        LLOLOOLOLO
       </details>
     </div>
   </div>
 </template>
-
 <script>
 // @ is an alias to /src
 import Start from "@/components/start.vue";

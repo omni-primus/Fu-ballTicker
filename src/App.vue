@@ -16,7 +16,7 @@
 
 <style scoped>
 .home {
-  color: #000;
+  color: rgb(0, 0, 0);
   margin-top: 100px;
 }
 .mannschaft {
