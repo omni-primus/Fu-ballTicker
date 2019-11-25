@@ -1,14 +1,8 @@
 <template>
   <div class="home">
     <start msg="Fußball Ticker App" />
-    <div id="erster" style="">
-      <p>
-        Diesen Text solltest du nur sehen wenn du das erste mal auf der Seite
-        bist.
-      </p>
-    </div>
     <div id="selection">
-      <details id="bundesliga">
+      <details v-if="lol()" id="bundesliga">
         <summary>Bundesliga</summary>
         <input id="FCB" type="checkbox" name="FCB" />
         <label for="FCB">1.FC Bayern München</label>
@@ -64,7 +58,9 @@
         <input id="FCS04" type="checkbox" name="FCS04" />
         <label for="FCS04">FC Schalke 04</label>
         <br />
+        <button>Teams bestätigen</button>
       </details>
+      <details v-else style="display:none;"></details>
     </div>
   </div>
 </template>
@@ -80,7 +76,7 @@ export default {
   methods: {
     showfirst: function() {
       let erster = document.getElementById("#erster");
-      erster.style.display = "none";
+      erster.style.display = "";
     },
     GetCookie: function(name) {
       var arg = name + "=";
@@ -94,16 +90,16 @@ export default {
         if (i == 0) break;
       }
       return null;
+    },
+    lol: function() {
+      let x1 = localStorage.getItem("visit");
+      if (x1 == null) {
+        localStorage.setItem("visit", "1");
+        return false;
+      } else {
+        return true;
+      }
     }
-  },
-  ready: function() {
-    var visit = this.GetCookie("COOKIE1");
-    if (visit == null) {
-      this.showfirst();
-    }
-    var expire = new Date();
-    expire = new Date(expire.getTime() + 7776000000);
-    document.cookie = "COOKIE1=here; expires = " + expire;
   }
 };
 </script>
