@@ -58,7 +58,16 @@
         <input id="FCS04" type="checkbox" name="FCS04" />
         <label for="FCS04">FC Schalke 04</label>
         <br />
-        <button>Teams bestätigen</button>
+        <a href="" class="button">
+          <ul>
+            <li>Teams eintragen</li>
+            <li>werden eingetragen..</li>
+            <li></li>
+          </ul>
+          <div>
+            <svg viewBox="0 0 24 24"></svg>
+          </div>
+        </a>
       </details>
       <details v-else style="display:none;"></details>
     </div>
