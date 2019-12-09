@@ -58,21 +58,15 @@
         <input id="FCS04" type="checkbox" name="FCS04" />
         <label for="FCS04">FC Schalke 04</label>
         <br />
-        <a href="" class="button">
-          <ul>
-            <li>Teams eintragen</li>
-            <li>werden eingetragen..</li>
-            <li></li>
-          </ul>
-          <div>
-            <svg viewBox="0 0 24 24"></svg>
-          </div>
-        </a>
+        <button class="button" @v-on:click="knopf">
+          Trag meine Teams ein
+        </button>
       </details>
       <details v-else style="display:none;"></details>
     </div>
   </div>
 </template>
+
 <script>
 // @ is an alias to /src
 import Start from "@/components/start.vue";
@@ -87,19 +81,6 @@ export default {
       let erster = document.getElementById("#erster");
       erster.style.display = "";
     },
-    GetCookie: function(name) {
-      var arg = name + "=";
-      var alen = arg.length;
-      var clen = document.cookie.length;
-      var i = 0;
-      while (i < clen) {
-        var j = i + alen;
-        if (document.cookie.substring(i, j) == arg) return "here";
-        i = document.cookie.indexOf(" ", i) + 1;
-        if (i == 0) break;
-      }
-      return null;
-    },
     lol: function() {
       let x1 = localStorage.getItem("visit");
       if (x1 == null) {
@@ -108,7 +89,14 @@ export default {
       } else {
         return true;
       }
+    },
+    knopf: function(event) {
+      alert("Du hast den Knopf gedrückt");
+      if (event) {
+        alert("halt doch die fresse");
+      }
     }
   }
 };
+
 </script>

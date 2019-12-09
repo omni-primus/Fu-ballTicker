@@ -459,14 +459,6 @@ methods: {
 };
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -507,6 +499,414 @@ beforeMount
 \end_inset
 
  ist der Fehler zwar weg, aber funktionieren tut es trotzdem nicht
+\end_layout
+
+\begin_layout Section
+Tag 5 25.11.2019
+\end_layout
+
+\begin_layout Itemize
+auf Empfehlung die Cookie angelegenheit gelöscht und auf local storage zurückgeg
+riffen
+\end_layout
+
+\begin_layout Itemize
+beim ersten Aufruf wird nun die Auswahl angezeigt und beim zweiten mal nicht
+ -> später ändern, dass wenn nur nich angezeigt wird wenn keine Teams gesetzt
+\end_layout
+
+\begin_layout Itemize
+neue vue sachen entdeckt: vue-if, else -> komischer Syntax
+\end_layout
+
+\begin_layout Section
+Tag 6 09.12.2019
+\end_layout
+
+\begin_layout Itemize
+hab vergeblich versucht einen Button zu erstellen der auf ein externes script
+ zugreift
+\end_layout
+
+\begin_layout Itemize
+hab ein <a> der mittels v-on:click die Funktion knopf aufruft
+\end_layout
+
+\begin_layout Itemize
+in der Funktion ist dann die Animation enthalten die beim drücken geschehen
+ soll, allerdings mit Funktionen aus der TweenMax Datei von GSAP
+\end_layout
+
+\begin_layout Itemize
+<script> in index bewirkt nichts
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/
+gsap/2.1.3/TweenMax.min.js" ></script>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mounted(){
+\end_layout
+
+\begin_layout Plain Layout
+
+	let scripts = document.createElement(
+\begin_inset Quotes eld
+\end_inset
+
+script
+\begin_inset Quotes erd
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Plain Layout
+
+	scripts.setAttribute(
+\begin_inset Quotes eld
+\end_inset
+
+src
+\begin_inset Quotes erd
+\end_inset
+
+,"https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js");
+\end_layout
+
+\begin_layout Plain Layout
+
+	document.head.appendChild(scripts);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+bewirkt auch nichts
+\end_layout
+
+\begin_layout Itemize
+das ganze zu installieren funktioniert irgendwie auch nicht
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+npm install --save "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js?
+vue&type=script&lang=js"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+auch einen neuen Component hinzuzufügen gibt mir einen Fehler
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SomeComponent: () => {
+\end_layout
+
+\begin_layout Plain Layout
+
+	let vm = this;
+\end_layout
+
+\begin_layout Plain Layout
+
+	return new Promise((resolve, reject) => {
+\end_layout
+
+\begin_layout Plain Layout
+
+	let script = document.createElement("script");
+\end_layout
+
+\begin_layout Plain Layout
+
+	script.onload = () => {
+\end_layout
+
+\begin_layout Plain Layout
+
+		resolve(import(SomeComponent));
+\end_layout
+
+\begin_layout Plain Layout
+
+		script.async = true;
+\end_layout
+
+\begin_layout Plain Layout
+
+		script.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js";
+\end_layout
+
+\begin_layout Plain Layout
+
+		document.head.appendChild(script);
+\end_layout
+
+\begin_layout Plain Layout
+
+		};
+\end_layout
+
+\begin_layout Plain Layout
+
+	})
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+große Ratlosigkeit, werde wohl drauf verzichten müssen
+\end_layout
+
+\begin_layout Itemize
+Funktion:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+knopf: function(event) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+	let duration = 3000, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	btn = event.target,
+\end_layout
+
+\begin_layout Plain Layout
+
+	svg = btn.find("svg"),
+\end_layout
+
+\begin_layout Plain Layout
+
+	svgPath = new Proxy( {
+\end_layout
+
+\begin_layout Plain Layout
+
+		y: null,
+\end_layout
+
+\begin_layout Plain Layout
+
+		smoothing: null
+\end_layout
+
+\begin_layout Plain Layout
+
+	},
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\end_layout
+
+\begin_layout Plain Layout
+
+		set(target, key, value) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			target[key] = value;
+\end_layout
+
+\begin_layout Plain Layout
+
+			if (target.y !== null && target.smoothing !== null) {
+\end_layout
+
+\begin_layout Plain Layout
+
+				svg.html(getPath(target.y, target.smoothing, null));
+\end_layout
+
+\begin_layout Plain Layout
+
+			}
+\end_layout
+
+\begin_layout Plain Layout
+
+			return true;
+\end_layout
+
+\begin_layout Plain Layout
+
+		},
+\end_layout
+
+\begin_layout Plain Layout
+
+		get(target, key) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			return target[key];
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+	});
+\end_layout
+
+\begin_layout Plain Layout
+
+	btn.css("--duration", duration);
+\end_layout
+
+\begin_layout Plain Layout
+
+	svgPath.y = 20;
+\end_layout
+
+\begin_layout Plain Layout
+
+	svgPath.smoothing = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (event) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (!btn.hasClass("loading")) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			btn.addClass("loading");
+\end_layout
+
+\begin_layout Plain Layout
+
+			TweenMax.to(svgPath, (duration * 0.065) / 1000, { smoothing: 0.3});
+\end_layout
+
+\begin_layout Plain Layout
+
+			TweenMax.to(svgPath, (duration * 0.265) / 1000, { 
+\end_layout
+
+\begin_layout Plain Layout
+
+				y: 12, ease: Elastic.easeOut.config(1.12, 0.4)}).delay((duration * 0.065)
+ / 1000);
+\end_layout
+
+\begin_layout Plain Layout
+
+				setTimeout(() => { svg.html(getPath(0, 0, [[3, 14], [8, 19], [21, 6]]));
+\end_layout
+
+\begin_layout Plain Layout
+
+			}, duration / 2);
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+		return false;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+nach langem rumprobieren habe ich erstmal alles rausgenommen und den Knopf
+ selber neu geschrieben
+\end_layout
+
+\begin_layout Itemize
+neues Problem: wenn ich auf den Knopf drücke passiert nichts
 \end_layout
 
 \end_body
