@@ -900,5 +900,14 @@ knopf: function(event) {
 
 \end_layout
 
+\begin_layout Itemize
+nach langem rumprobieren habe ich erstmal alles rausgenommen und den Knopf
+ selber neu geschrieben
+\end_layout
+
+\begin_layout Itemize
+neues Problem: wenn ich auf den Knopf drücke passiert nichts
+\end_layout
+
 \end_body
 \end_document

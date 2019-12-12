@@ -909,5 +909,26 @@ nach langem rumprobieren habe ich erstmal alles rausgenommen und den Knopf
 neues Problem: wenn ich auf den Knopf drücke passiert nichts
 \end_layout
 
+\begin_layout Itemize
+Fehler gefunden: der Linter hat mir einen falschen Tipp gegeben er wollte
+ dass ich bei dem on click event statt 
+\begin_inset Quotes eld
+\end_inset
+
+v:on
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+@
+\begin_inset Quotes erd
+\end_inset
+
+ schreibe aber das geht nicht, ist das normal?
+\end_layout
+
 \end_body
 \end_document

@@ -58,7 +58,7 @@
         <input id="FCS04" type="checkbox" name="FCS04" />
         <label for="FCS04">FC Schalke 04</label>
         <br />
-        <button class="button" @v-on:click="knopf">
+        <button class="button" v-on:click="knopf">
           Trag meine Teams ein
         </button>
       </details>
@@ -90,11 +90,14 @@ export default {
         return true;
       }
     },
-    knopf: function(event) {
-      alert("Du hast den Knopf gedrückt");
-      if (event) {
-        alert("halt doch die fresse");
-      }
+    knopf: function() {
+       let teamtest = localStorage.getItem("teamsset");
+       if(teamtest == null) {
+         localStorage.setItem("teamset", "1");
+         return true;
+       } else {
+         return false;
+       }
     }
   }
 };
