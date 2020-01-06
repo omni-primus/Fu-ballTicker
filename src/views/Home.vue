@@ -55,8 +55,8 @@
         <input id="FCK" type="checkbox" name="checkbox" value="FCK" />
         <label for="FCK">1. FC Köln</label>
         <br />
-        <input id="FCS04" type="checkbox" name="checkbox" value="FCS04" />
-        <label for="FCS04">FC Schalke 04</label>
+        <input id="SCP" type="checkbox" name="checkbox" value="SCP" />
+        <label for="SCP">SC Paderborn</label>
         <br />
         <button class="button" @click="knopf">
           Trag meine Teams ein
@@ -64,7 +64,45 @@
       </details>
     </div>
     <div v-else id="div-main">
-
+      <div class="matchresult">
+        <table class="match">
+          <tr>
+            <td>Team 1</td>
+            <td>0 : 0</td>
+            <td>Team 2</td>
+          </tr>
+          <tr>
+            <td>Team 1</td>
+            <td>0 : 0</td>
+            <td>Team 2</td>
+          </tr>
+          <tr>
+            <td>Team 1</td>
+            <td>0 : 0</td>
+            <td>Team 2</td>
+          </tr>
+          <tr>
+            <td>Team 1</td>
+            <td>0 : 0</td>
+            <td>Team 2</td>
+          </tr>
+          <tr>
+            <td>Team 1</td>
+            <td>0 : 0</td>
+            <td>Team 2</td>
+          </tr>
+          <tr>
+            <td>Team 1</td>
+            <td>0 : 0</td>
+            <td>Team 2</td>
+          </tr>
+          <tr>
+            <td>Team 1</td>
+            <td>0 : 0</td>
+            <td>Team 2</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </template>

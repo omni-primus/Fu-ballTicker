@@ -34,6 +34,35 @@
   -webkit-transform: scale(1.05, 1.05);
   -moz-transform: scale(1.05, 1.05);
 }
+
+#div-main {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.matchresult {
+  height: auto;
+  text-align: center;
+}
+
+table.match {
+  width: 80%;
+  border-collapse: collapse;
+  margin-right: 10%;
+  margin-left: 10%;
+  font-size: 20px;
+}
+table.match tr:nth-child(even) {background-color: #66ff6e; color: black;}
+table.match tr {
+  background-color: #242424;
+  color: white;
+}
+
+td {
+  text-align: center;
+  width: 33.33333%;
+  height: 50px;
+}
 </style>
 
 <style scoped lang="scss">
