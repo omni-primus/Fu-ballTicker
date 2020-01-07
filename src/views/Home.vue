@@ -1,106 +1,26 @@
 <template>
-  <div class="home">
-    <start msg="Fußball Ticker App" />
+  <div class="Home">
+    <h1>Fußball Ticker App</h1>
     <div v-if="teamcheck()" id="selection">
-      <details id="bundesliga">
-        <summary>Bundesliga</summary>
-        <input id="FCB" type="checkbox" name="checkbox" value="FCB" />
-        <label for="FCB">1.FC Bayern München</label>
-        <br />
-        <input id="BVB" type="checkbox" name="checkbox" value="BVB" />
-        <label for="BVB">Borussia Dortmund</label>
-        <br />
-        <input id="UB" type="checkbox" name="checkbox" value="UB" />
-        <label for="UB">1.FC Union Berlin</label>
-        <br />
-        <input id="BMG" type="checkbox" name="checkbox" value="BMG" />
-        <label for="BMG">Borussia Mönchen Gladbach</label>
-        <br />
-        <input id="RBL" type="checkbox" name="checkbox" value="RBL" />
-        <label for="RBL">RB Leipzig</label>
-        <br />
-        <input id="SCF" type="checkbox" name="checkbox" value="SCF" />
-        <label for="SCF">SC Freiburg</label>
-        <br />
-        <input id="TSGH" type="checkbox" name="checkbox" value="TSGH" />
-        <label for="TSGH">TSG 1899 Hoffenheim</label>
-        <br />
-        <input id="SGEF" type="checkbox" name="checkbox" value="SGEF" />
-        <label for="SGEF">SG Eintracht Frankfurt</label>
-        <br />
-        <input id="FCS04" type="checkbox" name="checkbox" value="FCS04" />
-        <label for="FCS04">FC Schalke 04</label>
-        <br />
-        <input id="BL" type="checkbox" name="checkbox" value="BL" />
-        <label for="BL">Bayer 04 Leverkusen</label>
-        <br />
-        <input id="VFLW" type="checkbox" name="checkbox" value="VFLW" />
-        <label for="VFLW">VFL Wolfsburg</label>
-        <br />
-        <input id="HBSC" type="checkbox" name="checkbox" value="HBSC" />
-        <label for="HBSC">Hertha BSC</label>
-        <br />
-        <input id="FD" type="checkbox" name="checkbox" value="FD" />
-        <label for="FD">Fortuna Düsseldorf</label>
-        <br />
-        <input id="WB" type="checkbox" name="checkbox" value="WB" />
-        <label for="WB">Sv Werder Bremen</label>
-        <br />
-        <input id="FCA" type="checkbox" name="checkbox" value="FCA" />
-        <label for="FCA">FC Augsburg</label>
-        <br />
-        <input id="M05" type="checkbox" name="checkbox" value="M05" />
-        <label for="M05">1. FSV Mainz 05</label>
-        <br />
-        <input id="FCK" type="checkbox" name="checkbox" value="FCK" />
-        <label for="FCK">1. FC Köln</label>
-        <br />
-        <input id="SCP" type="checkbox" name="checkbox" value="SCP" />
-        <label for="SCP">SC Paderborn</label>
-        <br />
-        <button class="button" @click="knopf">
-          Trag meine Teams ein
-        </button>
-      </details>
+      <Checkboxen></Checkboxen>
     </div>
     <div v-else id="div-main">
-      <div class="matchresult">
-        <table class="match">
-          <tr>
-            <td>Team 1</td>
-            <td>0 : 0</td>
-            <td>Team 2</td>
-          </tr>
-          <tr>
-            <td>Team 1</td>
-            <td>0 : 0</td>
-            <td>Team 2</td>
-          </tr>
-          <tr>
-            <td>Team 1</td>
-            <td>0 : 0</td>
-            <td>Team 2</td>
-          </tr>
-          <tr>
-            <td>Team 1</td>
-            <td>0 : 0</td>
-            <td>Team 2</td>
-          </tr>
-          <tr>
-            <td>Team 1</td>
-            <td>0 : 0</td>
-            <td>Team 2</td>
-          </tr>
-          <tr>
-            <td>Team 1</td>
-            <td>0 : 0</td>
-            <td>Team 2</td>
-          </tr>
-          <tr>
-            <td>Team 1</td>
-            <td>0 : 0</td>
-            <td>Team 2</td>
-          </tr>
+      <div id="matchresult">
+        <table id="match">
+          <thead>
+            <tr>
+              <th>Team 1</th>
+              <th>Score</th>
+              <th>Team 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="team in spieltag">
+              <td>{{ team.team1 }}</td>
+              <td>{{ team.tore1 }}:{{ team.tore2 }}</td>
+              <td>{{ team.team2 }}</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
@@ -109,35 +29,93 @@
 
 <script>
 // @ is an alias to /src
-import Start from "@/components/start.vue";
+import Checkboxen from "@/components/checkboxen.vue";
 
 export default {
   name: "Home",
   components: {
-    Start
+    Checkboxen
+  },
+  data() {
+    return {
+      spieltag: [
+        {
+          team1: "1. FC Bayern München",
+          team2: "FC Schalke 04",
+          tore1: 100,
+          tore2: 0
+        },
+        {
+          team1: "1. FC Bayern München",
+          team2: "Werder Bremen",
+          tore1: 4,
+          tore2: 0
+        },
+        {
+          team1: "1. FC Bayern München",
+          team2: "RB Leipzig",
+          tore1: 0,
+          tore2: 2
+        },
+        {
+          team1: "1. FC Bayern München",
+          team2: "Borussia Dortmund",
+          tore1: 2,
+          tore2: 2
+        },
+        {
+          team1: "FC Schalke 04",
+          team2: "RB Leipzig",
+          tore1: 0,
+          tore2: 50
+        },
+        {
+          team1: "FC Schalke 04",
+          team2: "Werder Bremen",
+          tore1: 0,
+          tore2: 5
+        },
+        {
+          team1: "FC Schalke 04",
+          team2: "Borussia Dortmund",
+          tore1: 0,
+          tore2: 54
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "Werder Bremen",
+          tore1: 4,
+          tore2: 0
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "Borussia Dortmund",
+          tore1: 6,
+          tore2: 4
+        },
+        {
+          team1: "Borussia Dortmund",
+          team2: "Werder Bremen",
+          tore1: 5,
+          tore2: 1
+        }
+      ],
+      wahl: []
+    };
+  },
+  mounted() {
+    if (localStorage.getItem("chosen")) {
+      this.wahl = JSON.parse(localStorage.getItem("chosen"));
+    }
   },
   methods: {
     teamcheck: function() {
-      let x1 = localStorage.getItem("teams");
+      let x1 = localStorage.getItem("chosen");
       if (x1 == null) {
         return true;
       } else {
         return false;
       }
-    },
-    knopf: function() {
-      var checkboxen = document.getElementsByName("checkbox");
-      let boxenchecked = [];
-
-      for (let i = 0; i < checkboxen.length; i++) {
-        if (checkboxen[i].checked) {
-          boxenchecked.push(checkboxen[i].value);
-        }
-      }
-      if (boxenchecked.length != 0) {
-        localStorage.setItem("teams", JSON.stringify(boxenchecked));
-        location.reload();
-      } else alert("Nichts ausgewählt");
     }
   }
 };

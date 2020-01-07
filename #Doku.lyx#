@@ -1,0 +1,974 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Entwickler-Tagebuch: Programmierung von Benutzeroberflächen
+\end_layout
+
+\begin_layout Author
+von Paul Krampe und Fabian Hovestädt
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Tag 1: 14.10.2019
+\end_layout
+
+\begin_layout Itemize
+Idee Festlegung: Fußball-App -> Ergebnisse von Fußballspielen anzeigen
+\end_layout
+
+\begin_layout Itemize
+individuelles einstellen von Teams oder Ligen denen der User folgen möchte,
+ die dann auch angezeigt werden
+\end_layout
+
+\begin_layout Itemize
+ersten Ansichten wurden erstellt: siehe Bild 1
+\end_layout
+
+\begin_layout Itemize
+muss: Anzeigen von Fußballergebnissen der ausgewählten Mannschaft oder Liga
+ (Lokal), Funktionierendes GUI, Daten verbunden mit einer Datenbank, Profilansic
+ht für Mannschaft
+\end_layout
+
+\begin_layout Itemize
+kann: Live Daten aus Fußball-API, aktuelle Daten, mehrere Ligen (Premier
+ League), Mannschaft mit Kader anzeigen, Spielverlauf der letzten Tage jeder
+ Mannschaft
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Bilder/Whiteboard1.jpeg
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Bild1: Startbildschirm erste Idee
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Bilder/Whiteboard2.jpeg
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Bild2: Mannschaft Profilansicht
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Tag 2: 04.11.2019
+\end_layout
+
+\begin_layout Itemize
+erstellen Git Repository, verknüpfen des Projektes mit Github -> Steiniger
+ Weg das hinzubekommen ohne Hilfe
+\end_layout
+
+\begin_layout Itemize
+ersten 
+\begin_inset Quotes eld
+\end_inset
+
+commit
+\begin_inset Quotes erd
+\end_inset
+
+ ausführen
+\end_layout
+
+\begin_layout Itemize
+vertraut machen mit der Projektumgebung in Visual Studio Code
+\end_layout
+
+\begin_layout Itemize
+erste Änderung des Standartprojektes -> In Vue reinzukommen ist echt anstrengend
+, obwohl ich schon HTML, CSS, JS recht gut beherrsche.
+ Erinnert an C++ und Klassen
+\end_layout
+
+\begin_layout Itemize
+eventuell mögliche API: https://www.programmableweb.com/api/bundesliga-live-scores
+ -> sieht allerdings sehr kompliziert aus und wir kennen die Funktionalität
+ und die Aktualität nicht
+\end_layout
+
+\begin_layout Section
+Tag 3: 11.11.2019
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Problem
+\begin_inset Quotes erd
+\end_inset
+
+ mit Git commits -> konnte nicht commiten obwohl Änderungen erkannt wurden
+ -> hat mich sehr verwirrt
+\end_layout
+
+\begin_layout Itemize
+Lösung war recht simple -> musste vorher sagen welche Files er commiten
+ soll -> git add -A (alle)
+\end_layout
+
+\begin_layout Section
+Tag 4 18.11.2019
+\end_layout
+
+\begin_layout Itemize
+neuen Branch erstellt -> offizielle GitHub Seite hat vergessen zu erwähnen
+ wie man den Branch 
+\begin_inset Quotes eld
+\end_inset
+
+pushed
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+versuche eine funktion zu schreiben die beim ersten aufruf der seite einen
+ bestimmten div sichtbar macht, sonst ausblendet
+\end_layout
+
+\begin_layout Itemize
+zuerst hab ich versucht einen Cookie zu setzten und damit zu checken ob
+ man die Seite schonmal besucht hat
+\end_layout
+
+\begin_layout Itemize
+mit beforeMount soll er am Anfang gucken, ob ein Cookie gesetzt ist, wenn
+ nicht -> zeigt er den div an
+\end_layout
+
+\begin_layout Itemize
+danach setzt er einen neuen Cookie
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<div id="erster" style=
+\begin_inset Quotes erd
+\end_inset
+
+display=
+\begin_inset Quotes erd
+\end_inset
+
+none
+\begin_inset Quotes erd
+\end_inset
+
+>
+\end_layout
+
+\begin_layout Plain Layout
+
+	<p>Text</p>
+\end_layout
+
+\begin_layout Plain Layout
+
+</div>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+methods: {
+\end_layout
+
+\begin_layout Plain Layout
+
+	GetCookie: function(name){
+\end_layout
+
+\begin_layout Plain Layout
+
+		var arg = name + "=";
+\end_layout
+
+\begin_layout Plain Layout
+
+		var alen = arg.length;
+\end_layout
+
+\begin_layout Plain Layout
+
+        var clen = document.cookie.length;
+\end_layout
+
+\begin_layout Plain Layout
+
+        var i = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+        while (i < clen) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            var j = i + alen;
+\end_layout
+
+\begin_layout Plain Layout
+
+               if (document.cookie.substring(i, j) == arg)
+\end_layout
+
+\begin_layout Plain Layout
+
+                    return "here";
+\end_layout
+
+\begin_layout Plain Layout
+
+                i = document.cookie.indexOf(" ", i) + 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+                if (i == 0)
+\end_layout
+
+\begin_layout Plain Layout
+
+                     break;
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        return null;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	showfirst: function(){
+\end_layout
+
+\begin_layout Plain Layout
+
+		let erster = document.getElementById("#erster");
+\end_layout
+
+\begin_layout Plain Layout
+
+	    erster.style.display = "inline";
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	beforeMount: function(){
+\end_layout
+
+\begin_layout Plain Layout
+
+		let visit = GetCookie("COOKIE1");
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (visit == null){
+\end_layout
+
+\begin_layout Plain Layout
+
+        	showfirst();
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+	    let expire=new Date();
+\end_layout
+
+\begin_layout Plain Layout
+
+	    expire = new Date(expire.getTime() + 7776000000);
+\end_layout
+
+\begin_layout Plain Layout
+
+	    document.cookie="COOKIE1=here; expires=" + expire;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+ich bekomme zwar kein fehler aber es funktioniert nicht 
+\end_layout
+
+\begin_layout Itemize
+Chrome sagt mir, dass 
+\begin_inset Quotes eld
+\end_inset
+
+style of null
+\begin_inset Quotes erd
+\end_inset
+
+ nicht lesen kann -> vermute, dass das Objekt noch nicht erstellt ist und
+ er demnach den style nicht ändern kann
+\end_layout
+
+\begin_layout Itemize
+mit 
+\begin_inset Quotes eld
+\end_inset
+
+ready:
+\begin_inset Quotes erd
+\end_inset
+
+ statt 
+\begin_inset Quotes eld
+\end_inset
+
+beforeMount
+\begin_inset Quotes erd
+\end_inset
+
+ ist der Fehler zwar weg, aber funktionieren tut es trotzdem nicht
+\end_layout
+
+\begin_layout Section
+Tag 5 25.11.2019
+\end_layout
+
+\begin_layout Itemize
+auf Empfehlung die Cookie angelegenheit gelöscht und auf local storage zurückgeg
+riffen
+\end_layout
+
+\begin_layout Itemize
+beim ersten Aufruf wird nun die Auswahl angezeigt und beim zweiten mal nicht
+ -> später ändern, dass wenn nur nich angezeigt wird wenn keine Teams gesetzt
+\end_layout
+
+\begin_layout Itemize
+neue vue sachen entdeckt: vue-if, else -> komischer Syntax
+\end_layout
+
+\begin_layout Section
+Tag 6 09.12.2019
+\end_layout
+
+\begin_layout Itemize
+hab vergeblich versucht einen Button zu erstellen der auf ein externes script
+ zugreift
+\end_layout
+
+\begin_layout Itemize
+hab ein <a> der mittels v-on:click die Funktion knopf aufruft
+\end_layout
+
+\begin_layout Itemize
+in der Funktion ist dann die Animation enthalten die beim drücken geschehen
+ soll, allerdings mit Funktionen aus der TweenMax Datei von GSAP
+\end_layout
+
+\begin_layout Itemize
+<script> in index bewirkt nichts
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/
+gsap/2.1.3/TweenMax.min.js" ></script>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mounted(){
+\end_layout
+
+\begin_layout Plain Layout
+
+	let scripts = document.createElement(
+\begin_inset Quotes eld
+\end_inset
+
+script
+\begin_inset Quotes erd
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Plain Layout
+
+	scripts.setAttribute(
+\begin_inset Quotes eld
+\end_inset
+
+src
+\begin_inset Quotes erd
+\end_inset
+
+,"https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js");
+\end_layout
+
+\begin_layout Plain Layout
+
+	document.head.appendChild(scripts);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+bewirkt auch nichts
+\end_layout
+
+\begin_layout Itemize
+das ganze zu installieren funktioniert irgendwie auch nicht
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+npm install --save "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js?
+vue&type=script&lang=js"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+auch einen neuen Component hinzuzufügen gibt mir einen Fehler
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SomeComponent: () => {
+\end_layout
+
+\begin_layout Plain Layout
+
+	let vm = this;
+\end_layout
+
+\begin_layout Plain Layout
+
+	return new Promise((resolve, reject) => {
+\end_layout
+
+\begin_layout Plain Layout
+
+	let script = document.createElement("script");
+\end_layout
+
+\begin_layout Plain Layout
+
+	script.onload = () => {
+\end_layout
+
+\begin_layout Plain Layout
+
+		resolve(import(SomeComponent));
+\end_layout
+
+\begin_layout Plain Layout
+
+		script.async = true;
+\end_layout
+
+\begin_layout Plain Layout
+
+		script.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js";
+\end_layout
+
+\begin_layout Plain Layout
+
+		document.head.appendChild(script);
+\end_layout
+
+\begin_layout Plain Layout
+
+		};
+\end_layout
+
+\begin_layout Plain Layout
+
+	})
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+große Ratlosigkeit, werde wohl drauf verzichten müssen
+\end_layout
+
+\begin_layout Itemize
+Funktion:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+knopf: function(event) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+	let duration = 3000, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	btn = event.target,
+\end_layout
+
+\begin_layout Plain Layout
+
+	svg = btn.find("svg"),
+\end_layout
+
+\begin_layout Plain Layout
+
+	svgPath = new Proxy( {
+\end_layout
+
+\begin_layout Plain Layout
+
+		y: null,
+\end_layout
+
+\begin_layout Plain Layout
+
+		smoothing: null
+\end_layout
+
+\begin_layout Plain Layout
+
+	},
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\end_layout
+
+\begin_layout Plain Layout
+
+		set(target, key, value) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			target[key] = value;
+\end_layout
+
+\begin_layout Plain Layout
+
+			if (target.y !== null && target.smoothing !== null) {
+\end_layout
+
+\begin_layout Plain Layout
+
+				svg.html(getPath(target.y, target.smoothing, null));
+\end_layout
+
+\begin_layout Plain Layout
+
+			}
+\end_layout
+
+\begin_layout Plain Layout
+
+			return true;
+\end_layout
+
+\begin_layout Plain Layout
+
+		},
+\end_layout
+
+\begin_layout Plain Layout
+
+		get(target, key) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			return target[key];
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+	});
+\end_layout
+
+\begin_layout Plain Layout
+
+	btn.css("--duration", duration);
+\end_layout
+
+\begin_layout Plain Layout
+
+	svgPath.y = 20;
+\end_layout
+
+\begin_layout Plain Layout
+
+	svgPath.smoothing = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (event) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (!btn.hasClass("loading")) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			btn.addClass("loading");
+\end_layout
+
+\begin_layout Plain Layout
+
+			TweenMax.to(svgPath, (duration * 0.065) / 1000, { smoothing: 0.3});
+\end_layout
+
+\begin_layout Plain Layout
+
+			TweenMax.to(svgPath, (duration * 0.265) / 1000, { 
+\end_layout
+
+\begin_layout Plain Layout
+
+				y: 12, ease: Elastic.easeOut.config(1.12, 0.4)}).delay((duration * 0.065)
+ / 1000);
+\end_layout
+
+\begin_layout Plain Layout
+
+				setTimeout(() => { svg.html(getPath(0, 0, [[3, 14], [8, 19], [21, 6]]));
+\end_layout
+
+\begin_layout Plain Layout
+
+			}, duration / 2);
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+		return false;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+nach langem rumprobieren habe ich erstmal alles rausgenommen und den Knopf
+ selber neu geschrieben
+\end_layout
+
+\begin_layout Itemize
+neues Problem: wenn ich auf den Knopf drücke passiert nichts
+\end_layout
+
+\begin_layout Itemize
+Fehler gefunden: der Linter hat mir einen falschen Tipp gegeben er wollte
+ dass ich bei dem on click event statt 
+\begin_inset Quotes eld
+\end_inset
+
+v:on
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+@
+\begin_inset Quotes erd
+\end_inset
+
+ schreibe aber das geht nicht, ist das normal?
+\end_layout
+
+\begin_layout Section
+Tag 7 19.12.2019
+\end_layout
+
+\begin_layout Itemize
+haben uns im Labor an die Localstorage Geschichte gesetzt
+\end_layout
+
+\begin_layout Itemize
+als erstes habe ich die Funktion umgeschrieben, die die Teamauswahl anzeigen
+ soll -> wird nun nicht mehr nur beim ersten Aufruf angezeigt, sondern solange
+ wie keine Teams eingetragen sind
+\end_layout
+
+\begin_layout Itemize
+eine weitere Funktion soll beim Knopfdruck ausgeführt werden und checkt
+ alle Checkboxen ob sie 
+\begin_inset Quotes eld
+\end_inset
+
+gecheckt
+\begin_inset Quotes erd
+\end_inset
+
+ sind, wenn ja speichert er den Namen des Teams in einem array
+\end_layout
+
+\begin_layout Itemize
+mein plan ist es alle teams in einem array zu haben, damit ich sie dann
+ später abrufen kann
+\end_layout
+
+\begin_layout Section
+06.01.2020
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
