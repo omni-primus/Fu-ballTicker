@@ -173,8 +173,8 @@ export default {
 <style>
 body {
   background: #000;
-  background-image: url("C:/Users/doa2w/Documents/Uni/PvB/Fu-ballTicker/Bilder/Bg-Image.jpg");
-  background-image: url("C:/Users/doa2w/Documents/Uni/PvB/Fu-ballTicker/Bilder/Bg-Image.jpg");
+  background-image: url("Bg-Image.jpg");
+  background-image: url("Bg-Image.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -183,11 +183,6 @@ details summary::-webkit-details-marker {
 }
 #bund-img {
   width: 100%;
-}
-@media (max-width: 920px) {
-  body {
-    background-size: 920px;
-  }
 }
 </style>
 <style scoped>

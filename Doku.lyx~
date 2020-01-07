@@ -152,7 +152,7 @@ Bild1: Startbildschirm erste Idee
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -928,6 +928,38 @@ v:on
 \end_inset
 
  schreibe aber das geht nicht, ist das normal?
+\end_layout
+
+\begin_layout Section
+Tag 7 19.12.2019
+\end_layout
+
+\begin_layout Itemize
+haben uns im Labor an die Localstorage Geschichte gesetzt
+\end_layout
+
+\begin_layout Itemize
+als erstes habe ich die Funktion umgeschrieben, die die Teamauswahl anzeigen
+ soll -> wird nun nicht mehr nur beim ersten Aufruf angezeigt, sondern solange
+ wie keine Teams eingetragen sind
+\end_layout
+
+\begin_layout Itemize
+eine weitere Funktion soll beim Knopfdruck ausgeführt werden und checkt
+ alle Checkboxen ob sie 
+\begin_inset Quotes eld
+\end_inset
+
+gecheckt
+\begin_inset Quotes erd
+\end_inset
+
+ sind, wenn ja speichert er den Namen des Teams in einem array
+\end_layout
+
+\begin_layout Itemize
+mein plan ist es alle teams in einem array zu haben, damit ich sie dann
+ später abrufen kann
 \end_layout
 
 \end_body
