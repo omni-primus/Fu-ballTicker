@@ -15,13 +15,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="team in spieltag">
+            <tr v-for="team in test" :key="team">
               <td>{{ team.team1 }}</td>
               <td>{{ team.tore1 }}:{{ team.tore2 }}</td>
               <td>{{ team.team2 }}</td>
             </tr>
           </tbody>
         </table>
+        <button @click="getData">RAUS</button>
       </div>
     </div>
   </div>
@@ -40,25 +41,25 @@ export default {
     return {
       spieltag: [
         {
-          team1: "1. FC Bayern München",
+          team1: "FC Bayern München",
           team2: "FC Schalke 04",
           tore1: 100,
           tore2: 0
         },
         {
-          team1: "1. FC Bayern München",
+          team1: "FC Bayern München",
           team2: "Werder Bremen",
           tore1: 4,
           tore2: 0
         },
         {
-          team1: "1. FC Bayern München",
+          team1: "FC Bayern München",
           team2: "RB Leipzig",
           tore1: 0,
           tore2: 2
         },
         {
-          team1: "1. FC Bayern München",
+          team1: "FC Bayern München",
           team2: "Borussia Dortmund",
           tore1: 2,
           tore2: 2
@@ -100,7 +101,8 @@ export default {
           tore2: 1
         }
       ],
-      wahl: []
+      wahl: [],
+      test: []
     };
   },
   mounted() {
@@ -115,6 +117,23 @@ export default {
         return true;
       } else {
         return false;
+      }
+    },
+    getData: function() {
+      this.wahl.push(localStorage.getItem("chosen"));
+      for (let i = 0; i < this.spieltag.length; i++) {
+        for (let j = 0; j < this.wahl.length; j++) {
+          let temp = 0;
+          if (
+            this.spieltag[i].team1 == this.wahl[j] ||
+            this.spieltag[i].team2 == this.wahl[j]
+          ) {
+            for (let k = 0; k < this.test.length; k++) {
+              if (this.test[k] == this.spieltag[i]) temp++;
+            }
+            if (temp == 0) this.test.push(this.spieltag[i]);
+          }
+        }
       }
     }
   }
