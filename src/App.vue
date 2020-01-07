@@ -10,17 +10,26 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #fff;
+  width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(0, 0, 0, 0.5);
+  height: 920px;
+  border-radius: 10px 10px;
+  padding: 5px;
 }
 
 #div-main {
-  background-color: rgba(0, 0, 0, 0.5);
+  /*background-color: rgba(0, 0, 0, 0.5);*/
   width: 100%;
 }
 
-.matchresult {
+#matchresult {
   height: auto;
   text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 table#match {
@@ -41,8 +50,15 @@ table#match tr {
 
 td {
   text-align: center;
-  width: 33.33333%;
   height: 50px;
+}
+@media (max-width: 920px) {
+  #app {
+    width: 100%;
+  }
+  body {
+    background-size: 1920px;
+  }
 }
 </style>
 
