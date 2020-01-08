@@ -15,9 +15,10 @@
   margin-left: auto;
   margin-right: auto;
   background: rgba(0, 0, 0, 0.5);
-  height: 920px;
+  height: auto;
   border-radius: 10px 10px;
   padding: 5px;
+  padding-bottom: 30px;
 }
 
 #div-main {

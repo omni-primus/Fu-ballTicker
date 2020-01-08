@@ -1255,5 +1255,74 @@ Grundidee:
 
 \end_layout
 
+\begin_layout Itemize
+nach einiger Zeit hatte ich dann 2 Funktionen
+\end_layout
+
+\begin_layout Itemize
+eine die beim drücken eines Knopfes die gecheckten Boxen in den Localstorage
+ tut
+\end_layout
+
+\begin_layout Itemize
+eine die die Spiele aus dem Spieltag Array mit dem Localstorage vergleicht
+ und die gefunden Spiele in das Ergebnis Array kopiert
+\end_layout
+
+\begin_layout Itemize
+nach einigem Bugfixing hat das auch funktioniert
+\end_layout
+
+\begin_layout Itemize
+bin sehr zufrieden mit dem Tag, da ich im Grunde das komplette Projekt in
+ einem Tag komplett geändert habe
+\end_layout
+
+\begin_layout Itemize
+für 5 Teams kann man nun die jeweiligen Spiele anzeigen
+\end_layout
+
+\begin_layout Section
+08.01.2020
+\end_layout
+
+\begin_layout Itemize
+Design Aufbesserung: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Hintergrundbild
+\end_layout
+
+\begin_layout Itemize
+responsive Design
+\end_layout
+
+\begin_layout Itemize
+Banner zum Auklappen einer Liga
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+jetzt kann man sich die App angucken ohne Fremdscham spüren zu müssen
+\end_layout
+
+\begin_layout Itemize
+Bugfixes: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Tabelle wird erst gelöscht, wenn neue Teamauswahl getroffen um alte Tabelle
+ erst los zu werden
+\end_layout
+
+\begin_layout Itemize
+Neu laden der Seite bei vorhandenen Teams im Local Storage sorgt dafür das
+ man bei der Tabelle bleibt mit seinen Teams
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

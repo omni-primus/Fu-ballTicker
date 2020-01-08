@@ -152,7 +152,7 @@ Bild1: Startbildschirm erste Idee
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -541,7 +541,7 @@ in der Funktion ist dann die Animation enthalten die beim drücken geschehen
 <script> in index bewirkt nichts
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 \begin_inset listings
 inline false
 status open
@@ -557,7 +557,7 @@ gsap/2.1.3/TweenMax.min.js" ></script>
 
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 \begin_inset listings
 inline false
 status open
@@ -616,7 +616,7 @@ bewirkt auch nichts
 das ganze zu installieren funktioniert irgendwie auch nicht
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 \begin_inset listings
 inline false
 status open
@@ -636,7 +636,7 @@ vue&type=script&lang=js"
 auch einen neuen Component hinzuzufügen gibt mir einen Fehler
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 \begin_inset listings
 inline false
 status open
@@ -711,10 +711,10 @@ große Ratlosigkeit, werde wohl drauf verzichten müssen
 \end_layout
 
 \begin_layout Itemize
-Funktion:
+Funktion
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 \begin_inset listings
 inline false
 status open
@@ -960,6 +960,330 @@ gecheckt
 \begin_layout Itemize
 mein plan ist es alle teams in einem array zu haben, damit ich sie dann
  später abrufen kann
+\end_layout
+
+\begin_layout Section
+Tag 8 23.12.2019
+\end_layout
+
+\begin_layout Itemize
+hab mit php versucht eine Datenbank einzubinden
+\end_layout
+
+\begin_layout Itemize
+phpMyAdmin, php, ein Apache Server und MsSql Server installiert
+\end_layout
+
+\begin_layout Itemize
+eine Datenbank erstellt und eine Tabelle mit allen Bundesliga Teams + infos
+\end_layout
+
+\begin_layout Itemize
+nach mehrstündigem Versuchen das alles mit dem Vue Projekt zu verbinden
+ habe ich herrausgefunden, dass php und Vue überhaupt nicht mit einander
+ klar kommen und hab es sein lassen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Bilder/Datenbank.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Bild3: Datenbank + Tabelle
+\end_layout
+
+\begin_layout Section
+06.01.2020
+\end_layout
+
+\begin_layout Itemize
+Auf Nachfrage wie ich das Datenbankproblem lösen kann, wurde uns klar gemacht,
+ dass eine Datenbank zwar cool wäre, aber zeitlich für uns nicht realisierbar
+ mehr ist und etwas zu kompliziert
+\end_layout
+
+\begin_layout Itemize
+des weiteren ist die bisherige Struktur des Projektes nicht zufriedenstelltend
+ gewesen, da die Möglichkeiten von Vue von uns noch nicht wirklich genutzt
+ wurden
+\end_layout
+
+\begin_layout Itemize
+Auf Grund dieser Erkenntisse müssen wir ein paar unserer Projektpunkte ändern:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Wir streichen die Datenbank komplett
+\end_layout
+
+\begin_layout Itemize
+coden die Spielergebnisse in den Quellcode
+\end_layout
+
+\begin_layout Itemize
+ändern die Funktionsweise der App etwas
+\end_layout
+
+\begin_layout Itemize
+beschäftigen uns mehr mit Vue um unsere Struktur zu verbessern
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Verzweiflung, da im Grunde alles an was wir gearbeitet haben bullsh** war
+\end_layout
+
+\begin_layout Itemize
+haben dann 4,5 Stunden daran gesessen uns mit Vue weiter vertraut zu machen
+ und mit Arrays zu arbeiten um unsere Spiele irgendwie anzeigen zu lassen,
+ aber ohne großen Erfolg
+\end_layout
+
+\begin_layout Section
+07.01.2020
+\end_layout
+
+\begin_layout Itemize
+Da der gestriege Tag sehr niederschmetternd war hab ich mich nochmal an
+ das Problem gesetzt
+\end_layout
+
+\begin_layout Itemize
+ich hab unsere Checkboxen zuerst als Component ausgelaggert um Platz zu
+ schaffen
+\end_layout
+
+\begin_layout Itemize
+ich hab zwar keine Ahnung warum, aber alle 
+\begin_inset Quotes eld
+\end_inset
+
+Vue
+\begin_inset Quotes erd
+\end_inset
+
+ Variablen, die ich versucht habe anzulegen wurden nie angenommen
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+new vm = new Vue() {}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+gab mir immer die Fehler, dass vm definiert ist, aber nie verwendet wird
+ und das 
+\begin_inset Quotes eld
+\end_inset
+
+Vue
+\begin_inset Quotes erd
+\end_inset
+
+ nicht definiert ist
+\end_layout
+
+\begin_layout Itemize
+ich hab aber alle genau wie in der Vue-Dokumentation geschrieben, aber dennoch
+ ging nichts
+\end_layout
+
+\begin_layout Itemize
+mittels: einem 
+\begin_inset Quotes eld
+\end_inset
+
+import Vue from 'vue'
+\begin_inset Quotes erd
+\end_inset
+
+ konnte ich das eine Problem lösen, aber das andere nicht
+\end_layout
+
+\begin_layout Itemize
+hab dann einfach in dem export default eine data() funktion auf gemacht
+ und dort mein Spiel-array rein gemacht
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	return {
+\end_layout
+
+\begin_layout Plain Layout
+
+		spieltag: [
+\end_layout
+
+\begin_layout Plain Layout
+
+			{
+\end_layout
+
+\begin_layout Plain Layout
+
+				team1: "FC Bayern München",
+\end_layout
+
+\begin_layout Plain Layout
+
+				team2: "FC Schalke 04",
+\end_layout
+
+\begin_layout Plain Layout
+
+				tore1: 2,
+\end_layout
+
+\begin_layout Plain Layout
+
+				tore2: 0
+\end_layout
+
+\begin_layout Plain Layout
+
+			} //und so weiter
+\end_layout
+
+\begin_layout Plain Layout
+
+		]
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+die Daten in der Tabelle ausgeben habe ich dann mit einer v-for Schleife
+ realisiert
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<tr v-for="team in spieltag" :key="spieltag">
+\end_layout
+
+\begin_layout Plain Layout
+
+	<td>{{ team.team1 }}</td>
+\end_layout
+
+\begin_layout Plain Layout
+
+	<td>{{ team.tore1 }}:{{ team.tore2 }}</td>
+\end_layout
+
+\begin_layout Plain Layout
+
+	<td>{{ team.team2 }}</td>
+\end_layout
+
+\begin_layout Plain Layout
+
+</tr>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+nach Stunden bugfixing habe ich es endlich geschaft die Spiele auszugeben
+\end_layout
+
+\begin_layout Itemize
+nun hab ich mich dran gesetzt das alles mit dem ausgewählten im Localstorage
+ zu verbinden
+\end_layout
+
+\begin_layout Itemize
+Grundidee: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Bilder/Diagramm-Spielergebnisse.jpg
+	scale 40
+
+\end_inset
+
+
 \end_layout
 
 \end_body

@@ -62,7 +62,7 @@ export default {
         },
         {
           team1: "FC Bayern München",
-          team2: "Werder Bremen",
+          team2: "SV Werder Bremen",
           tore1: 4,
           tore2: 0
         },
@@ -79,6 +79,42 @@ export default {
           tore2: 2
         },
         {
+          team1: "FC Bayern München",
+          team2: "1.FC Union Berlin",
+          tore1: 2,
+          tore2: 2
+        },
+        {
+          team1: "FC Bayern München",
+          team2: "Borussia Mönchen Gladbach",
+          tore1: 0,
+          tore2: 1
+        },
+        {
+          team1: "FC Bayern München",
+          team2: "SC Freiburg",
+          tore1: 2,
+          tore2: 1
+        },
+        {
+          team1: "FC Bayern München",
+          team2: "TSG 1899 Hoffenheim",
+          tore1: 4,
+          tore2: 0
+        },
+        {
+          team1: "FC Bayern München",
+          team2: "SG Eintracht Frankfurt",
+          tore1: 1,
+          tore2: 5
+        },
+        {
+          team1: "FC Bayern München",
+          team2: "Bayer 04 Leverkusen",
+          tore1: 2,
+          tore2: 1
+        },
+        {
           team1: "FC Schalke 04",
           team2: "RB Leipzig",
           tore1: 0,
@@ -86,7 +122,7 @@ export default {
         },
         {
           team1: "FC Schalke 04",
-          team2: "Werder Bremen",
+          team2: "SV Werder Bremen",
           tore1: 0,
           tore2: 2
         },
@@ -97,21 +133,255 @@ export default {
           tore2: 1
         },
         {
+          team1: "FC Schalke 04",
+          team2: "Borussia Mönchen Gladbach",
+          tore1: 1,
+          tore2: 1
+        },
+        {
+          team1: "FC Schalke 04",
+          team2: "SC Freiburg",
+          tore1: 3,
+          tore2: 0
+        },
+        {
+          team1: "FC Schalke 04",
+          team2: "TSG 1899 Hoffenheim",
+          tore1: 2,
+          tore2: 2
+        },
+        {
+          team1: "FC Schalke 04",
+          team2: "SG Eintracht Frankfurt",
+          tore1: 3,
+          tore2: 2
+        },
+        {
+          team1: "FC Schalke 04",
+          team2: "Bayer 04 Leverkusen",
+          tore1: 0,
+          tore2: 0
+        },
+        {
+          team1: "FC Schalke 04",
+          team2: "1.FC Union Berlin",
+          tore1: 1,
+          tore2: 2
+        },
+        {
           team1: "RB Leipzig",
-          team2: "Werder Bremen",
+          team2: "SV Werder Bremen",
           tore1: 4,
           tore2: 0
         },
         {
           team1: "RB Leipzig",
           team2: "Borussia Dortmund",
+          tore1: 3,
+          tore2: 3
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "1.FC Union Berlin",
           tore1: 6,
-          tore2: 4
+          tore2: 0
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "Borussia Mönchen Gladbach",
+          tore1: 3,
+          tore2: 2
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "SC Freiburg",
+          tore1: 2,
+          tore2: 1
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "TSG 1899 Hoffenheim",
+          tore1: 3,
+          tore2: 0
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "SG Eintracht Frankfurt",
+          tore1: 4,
+          tore2: 1
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "Bayer 04 Leverkusen",
+          tore1: 2,
+          tore2: 2
         },
         {
           team1: "Borussia Dortmund",
-          team2: "Werder Bremen",
+          team2: "SV Werder Bremen",
           tore1: 5,
+          tore2: 2
+        },
+        {
+          team1: "Borussia Dortmund",
+          team2: "1.FC Union Berlin",
+          tore1: 4,
+          tore2: 1
+        },
+        {
+          team1: "Borussia Dortmund",
+          team2: "Borussia Mönchen Gladbach",
+          tore1: 3,
+          tore2: 0
+        },
+        {
+          team1: "Borussia Dortmund",
+          team2: "SC Freiburg",
+          tore1: 4,
+          tore2: 1
+        },
+        {
+          team1: "Borussia Dortmund",
+          team2: "TSG 1899 Hoffenheim",
+          tore1: 0,
+          tore2: 1
+        },
+        {
+          team1: "Borussia Dortmund",
+          team2: "SG Eintracht Frankfurt",
+          tore1: 2,
+          tore2: 1
+        },
+        {
+          team1: "Borussia Dortmund",
+          team2: "Bayer 04 Leverkusen",
+          tore1: 3,
+          tore2: 1
+        },
+        {
+          team1: "SV Werder Bremen",
+          team2: "1.FC Union Berlin",
+          tore1: 4,
+          tore2: 4
+        },
+        {
+          team1: "SV Werder Bremen",
+          team2: "Borussia Mönchen Gladbach",
+          tore1: 0,
+          tore2: 2
+        },
+        {
+          team1: "SV Werder Bremen",
+          team2: "SC Freiburg",
+          tore1: 1,
+          tore2: 1
+        },
+        {
+          team1: "SV Werder Bremen",
+          team2: "TSG 1899 Hoffenheim",
+          tore1: 0,
+          tore2: 3
+        },
+        {
+          team1: "SV Werder Bremen",
+          team2: "SG Eintracht Frankfurt",
+          tore1: 2,
+          tore2: 2
+        },
+        {
+          team1: "SV Werder Bremen",
+          team2: "Bayer 04 Leverkusen",
+          tore1: 0,
+          tore2: 2
+        },
+        {
+          team1: "1.FC Union Berlin",
+          team2: "Borussia Mönchen Gladbach",
+          tore1: 1,
+          tore2: 3
+        },
+        {
+          team1: "1.FC Union Berlin",
+          team2: "SC Freiburg",
+          tore1: 0,
+          tore2: 0
+        },
+        {
+          team1: "1.FC Union Berlin",
+          team2: "SG Eintracht Frankfurt",
+          tore1: 2,
+          tore2: 1
+        },
+        {
+          team1: "1.FC Union Berlin",
+          team2: "TSG 1899 Hoffenheim",
+          tore1: 2,
+          tore2: 3
+        },
+        {
+          team1: "1.FC Union Berlin",
+          team2: "Bayer 04 Leverkusen",
+          tore1: 1,
+          tore2: 3
+        },
+        {
+          team1: "Borussia Mönchen Gladbach",
+          team2: "SC Freiburg",
+          tore1: 4,
+          tore2: 0
+        },
+        {
+          team1: "Borussia Mönchen Gladbach",
+          team2: "TSG 1899 Hoffenheim",
+          tore1: 3,
+          tore2: 1
+        },
+        {
+          team1: "Borussia Mönchen Gladbach",
+          team2: "SG Eintracht Frankfurt",
+          tore1: 5,
+          tore2: 3
+        },
+        {
+          team1: "Borussia Mönchen Gladbach",
+          team2: "Bayer 04 Leverkusen",
+          tore1: 1,
+          tore2: 1
+        },
+        {
+          team1: "SC Freiburg",
+          team2: "TSG 1899 Hoffenheim",
+          tore1: 1,
+          tore2: 3
+        },
+        {
+          team1: "SC Freiburg",
+          team2: "SG Eintracht Frankfurt",
+          tore1: 1,
+          tore2: 1
+        },
+        {
+          team1: "SC Freiburg",
+          team2: "Bayer 04 Leverkusen",
+          tore1: 2,
+          tore2: 3
+        },
+        {
+          team1: "TSG 1899 Hoffenheim",
+          team2: "SG Eintracht Frankfurt",
+          tore1: 4,
+          tore2: 3
+        },
+        {
+          team1: "TSG 1899 Hoffenheim",
+          team2: "Bayer 04 Leverkusen",
+          tore1: 3,
+          tore2: 3
+        },
+        {
+          team1: "SG Eintracht Frankfurt",
+          team2: "Bayer 04 Leverkusen",
+          tore1: 0,
           tore2: 1
         }
       ],
@@ -119,19 +389,19 @@ export default {
       test: []
     };
   },
+  mounted() {
+    let x1 = localStorage.getItem("chosen");
+    if (x1 == null) {
+      this.boolean = true;
+    } else {
+      this.boolean = false;
+      this.getData();
+    }
+  },
   methods: {
-    /* teamcheck: function() {
-      let x1 = localStorage.getItem("chosen");
-      if (x1 == null) {
-        return true;
-      } else {
-        return false;
-      }
-    }, */
     getData: function() {
-      if (localStorage.getItem("chosen")) {
-        this.wahl = JSON.parse(localStorage.getItem("chosen"));
-      }
+      /* if (localStorage.getItem("chosen")) { */
+      this.wahl = JSON.parse(localStorage.getItem("chosen"));
       for (let i = 0; i < this.spieltag.length; i++) {
         for (let j = 0; j < this.wahl.length; j++) {
           let temp = 0;
@@ -150,6 +420,7 @@ export default {
     knopf: function() {
       var checkboxen = document.getElementsByName("checkbox");
       let boxenchecked = [];
+      this.test = []; //eventuellen früheren Inhalt löschen
       for (let i = 0; i < checkboxen.length; i++) {
         if (checkboxen[i].checked) {
           boxenchecked.push(checkboxen[i].value);
@@ -159,7 +430,7 @@ export default {
       if (boxenchecked.length != 0) {
         localStorage.setItem("chosen", JSON.stringify(boxenchecked));
       } else localStorage.removeItem("chosen");
-      setTimeout(3000);
+      setTimeout(5000);
       this.getData();
     },
     open: function() {
