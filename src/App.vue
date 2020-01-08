@@ -10,53 +10,55 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-.button {
-  --background: #275efe;
   color: #fff;
-  padding: 16px 32px;
-  display: inline-block;
-  font-size: 16px;
-  margin-top: 30px;
-  overflow: hidden;
-  text-decoration: none;
-  background: var(--background);
-  border-radius: 8px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
+  width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(0, 0, 0, 0.5);
+  height: 920px;
+  border-radius: 10px 10px;
+  padding: 5px;
 }
-.button:hover {
-  background-color: #4270fa;
-  transform: scale(1.05, 1.05);
-  -webkit-transform: scale(1.05, 1.05);
-  -moz-transform: scale(1.05, 1.05);
-}
+
 #div-main {
-  background-color: rgba(0, 0, 0, 0.5);
+  /*background-color: rgba(0, 0, 0, 0.5);*/
   width: 100%;
 }
-.matchresult {
+
+#matchresult {
   height: auto;
   text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
-table.match {
+
+table#match {
   width: 80%;
   border-collapse: collapse;
   margin-right: 10%;
   margin-left: 10%;
   font-size: 20px;
 }
-table.match tr:nth-child(even) {background-color: #66ff6e; color: black;}
-table.match tr {
+table#match tr:nth-child(even) {
+  background-color: #66ff6e;
+  color: black;
+}
+table#match tr {
   background-color: #242424;
   color: white;
 }
+
 td {
   text-align: center;
-  width: 33.33333%;
   height: 50px;
+}
+@media (max-width: 920px) {
+  #app {
+    width: 100%;
+  }
+  body {
+    background-size: 1920px;
+  }
 }
 </style>
 

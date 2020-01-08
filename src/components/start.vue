@@ -1,8 +1,25 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <ul id="">
+  <li v-for="item in items">
+    {{ item.message }}
+  </li>
+</ul>
   </div>
 </template>
+
+<script>
+var example1 = new Vue({
+  el: "#ergebnisListe",
+  data: {
+    items:[
+      { message: "FC Bayern 2:1 Dortmund" },
+      { message: "RB Leipzig 3:2 Gladbach" }
+    ]
+  }
+})
+</script>
 
 <script>
 export default {
