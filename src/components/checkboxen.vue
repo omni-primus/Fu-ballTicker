@@ -65,10 +65,10 @@
     <input id="FCA" type="checkbox" name="checkbox" value="FC Augsburg" />
     <label for="FCA">FC Augsburg</label>
     <br />
-    <input id="M05" type="checkbox" name="checkbox" value="1. FSV Mainz 05" />
+    <input id="M05" type="checkbox" name="checkbox" value="1.FSV Mainz 05" />
     <label for="M05">1. FSV Mainz 05</label>
     <br />
-    <input id="FCK" type="checkbox" name="checkbox" value="1. FC Köln" />
+    <input id="FCK" type="checkbox" name="checkbox" value="1.FC Köln" />
     <label for="FCK">1. FC Köln</label>
     <br />
     <input id="SCP" type="checkbox" name="checkbox" value="SC Paderborn" />

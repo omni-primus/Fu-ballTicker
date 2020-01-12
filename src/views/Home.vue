@@ -115,6 +115,48 @@ export default {
           tore2: 1
         },
         {
+          team1: "FC Bayern München",
+          team2: "VFL Wolfsburg",
+          tore1: 3,
+          tore2: 1
+        },
+        {
+          team1: "FC Bayern München",
+          team2: "Hertha BSC",
+          tore1: 1,
+          tore2: 0
+        },
+        {
+          team1: "FC Bayern München",
+          team2: "Fortuna Düsseldorf",
+          tore1: 2,
+          tore2: 2
+        },
+        {
+          team1: "FC Bayern München",
+          team2: "FC Augsburg",
+          tore1: 2,
+          tore2: 3
+        },
+        {
+          team1: "FC Bayern München",
+          team2: "1.FSV Mainz 05",
+          tore1: 2,
+          tore2: 0
+        },
+        {
+          team1: "FC Bayern München",
+          team2: "1.FC Köln",
+          tore1: 4,
+          tore2: 0
+        },
+        {
+          team1: "FC Bayern München",
+          team2: "SC Paderborn",
+          tore1: 5,
+          tore2: 1
+        },
+        {
           team1: "FC Schalke 04",
           team2: "RB Leipzig",
           tore1: 0,
@@ -169,6 +211,48 @@ export default {
           tore2: 2
         },
         {
+          team1: "FC Schalke 04",
+          team2: "VFL Wolfsburg",
+          tore1: 3,
+          tore2: 2
+        },
+        {
+          team1: "FC Schalke 04",
+          team2: "Hertha BSC",
+          tore1: 5,
+          tore2: 2
+        },
+        {
+          team1: "FC Schalke 04",
+          team2: "Fortuna Düsseldorf",
+          tore1: 0,
+          tore2: 2
+        },
+        {
+          team1: "FC Schalke 04",
+          team2: "FC Augsburg",
+          tore1: 1,
+          tore2: 0
+        },
+        {
+          team1: "FC Schalke 04",
+          team2: "1.FSV Mainz 05",
+          tore1: 4,
+          tore2: 2
+        },
+        {
+          team1: "FC Schalke 04",
+          team2: "1.FC Köln",
+          tore1: 3,
+          tore2: 0
+        },
+        {
+          team1: "FC Schalke 04",
+          team2: "SC Paderborn",
+          tore1: 4,
+          tore2: 1
+        },
+        {
           team1: "RB Leipzig",
           team2: "SV Werder Bremen",
           tore1: 4,
@@ -212,9 +296,51 @@ export default {
         },
         {
           team1: "RB Leipzig",
-          team2: "Bayer 04 Leverkusen",
-          tore1: 2,
+          team2: "VFL Wolfsburg",
+          tore1: 4,
           tore2: 2
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "Hertha BSC",
+          tore1: 3,
+          tore2: 1
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "Fortuna Düsseldorf",
+          tore1: 2,
+          tore2: 0
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "FC Augsburg",
+          tore1: 3,
+          tore2: 0
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "1.FSV Mainz 05",
+          tore1: 4,
+          tore2: 1
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "1.FC Köln",
+          tore1: 3,
+          tore2: 2
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "SC Paderborn",
+          tore1: 6,
+          tore2: 2
+        },
+        {
+          team1: "RB Leipzig",
+          team2: "Bayer 04 Leverkusen",
+          tore1: 4,
+          tore2: 3
         },
         {
           team1: "Borussia Dortmund",
@@ -259,6 +385,48 @@ export default {
           tore2: 1
         },
         {
+          team1: "Borussia Dortmund",
+          team2: "VFL Wolfsburg",
+          tore1: 2,
+          tore2: 2
+        },
+        {
+          team1: "Borussia Dortmund",
+          team2: "Hertha BSC",
+          tore1: 4,
+          tore2: 0
+        },
+        {
+          team1: "Borussia Dortmund",
+          team2: "Fortuna Düsseldorf",
+          tore1: 2,
+          tore2: 0
+        },
+        {
+          team1: "Borussia Dortmund",
+          team2: "FC Augsburg",
+          tore1: 1,
+          tore2: 2
+        },
+        {
+          team1: "Borussia Dortmund",
+          team2: "1.FSV Mainz 05",
+          tore1: 0,
+          tore2: 1
+        },
+        {
+          team1: "Borussia Dortmund",
+          team2: "1.FC Köln",
+          tore1: 3,
+          tore2: 2
+        },
+        {
+          team1: "Borussia Dortmund",
+          team2: "SC Paderborn",
+          tore1: 4,
+          tore2: 0
+        },
+        {
           team1: "SV Werder Bremen",
           team2: "1.FC Union Berlin",
           tore1: 4,
@@ -295,6 +463,48 @@ export default {
           tore2: 2
         },
         {
+          team1: "SV Werder Bremen",
+          team2: "VFL Wolfsburg",
+          tore1: 0,
+          tore2: 2
+        },
+        {
+          team1: "SV Werder Bremen",
+          team2: "Hertha BSC",
+          tore1: 1,
+          tore2: 2
+        },
+        {
+          team1: "SV Werder Bremen",
+          team2: "Fortuna Düsseldorf",
+          tore1: 3,
+          tore2: 2
+        },
+        {
+          team1: "SV Werder Bremen",
+          team2: "FC Augsburg",
+          tore1: 2,
+          tore2: 1
+        },
+        {
+          team1: "SV Werder Bremen",
+          team2: "1.FSV Mainz 05",
+          tore1: 3,
+          tore2: 2
+        },
+        {
+          team1: "SV Werder Bremen",
+          team2: "1.FC Köln",
+          tore1: 1,
+          tore2: 1
+        },
+        {
+          team1: "SV Werder Bremen",
+          team2: "SC Paderborn",
+          tore1: 0,
+          tore2: 0
+        },
+        {
           team1: "1.FC Union Berlin",
           team2: "Borussia Mönchen Gladbach",
           tore1: 1,
@@ -325,6 +535,48 @@ export default {
           tore2: 3
         },
         {
+          team1: "1.FC Union Berlin",
+          team2: "VFL Wolfsburg",
+          tore1: 0,
+          tore2: 3
+        },
+        {
+          team1: "1.FC Union Berlin",
+          team2: "Hertha BSC",
+          tore1: 3,
+          tore2: 2
+        },
+        {
+          team1: "1.FC Union Berlin",
+          team2: "Fortuna Düsseldorf",
+          tore1: 1,
+          tore2: 0
+        },
+        {
+          team1: "1.FC Union Berlin",
+          team2: "FC Augsburg",
+          tore1: 4,
+          tore2: 1
+        },
+        {
+          team1: "1.FC Union Berlin",
+          team2: "1.FSV Mainz 05",
+          tore1: 5,
+          tore2: 3
+        },
+        {
+          team1: "1.FC Union Berlin",
+          team2: "1.FC Köln",
+          tore1: 4,
+          tore2: 2
+        },
+        {
+          team1: "1.FC Union Berlin",
+          team2: "SC Paderborn",
+          tore1: 1,
+          tore2: 2
+        },
+        {
           team1: "Borussia Mönchen Gladbach",
           team2: "SC Freiburg",
           tore1: 4,
@@ -349,6 +601,48 @@ export default {
           tore2: 1
         },
         {
+          team1: "Borussia Mönchen Gladbach",
+          team2: "VFL Wolfsburg",
+          tore1: 4,
+          tore2: 3
+        },
+        {
+          team1: "Borussia Mönchen Gladbach",
+          team2: "Hertha BSC",
+          tore1: 1,
+          tore2: 2
+        },
+        {
+          team1: "Borussia Mönchen Gladbach",
+          team2: "Fortuna Düsseldorf",
+          tore1: 0,
+          tore2: 1
+        },
+        {
+          team1: "Borussia Mönchen Gladbach",
+          team2: "FC Augsburg",
+          tore1: 2,
+          tore2: 0
+        },
+        {
+          team1: "Borussia Mönchen Gladbach",
+          team2: "1.FSV Mainz 05",
+          tore1: 2,
+          tore2: 0
+        },
+        {
+          team1: "Borussia Mönchen Gladbach",
+          team2: "1.FC Köln",
+          tore1: 3,
+          tore2: 1
+        },
+        {
+          team1: "Borussia Mönchen Gladbach",
+          team2: "SC Paderborn",
+          tore1: 1,
+          tore2: 0
+        },
+        {
           team1: "SC Freiburg",
           team2: "TSG 1899 Hoffenheim",
           tore1: 1,
@@ -367,6 +661,48 @@ export default {
           tore2: 3
         },
         {
+          team1: "SC Freiburg",
+          team2: "VFL Wolfsburg",
+          tore1: 0,
+          tore2: 2
+        },
+        {
+          team1: "SC Freiburg",
+          team2: "Hertha BSC",
+          tore1: 1,
+          tore2: 1
+        },
+        {
+          team1: "SC Freiburg",
+          team2: "Fortuna Düsseldorf",
+          tore1: 0,
+          tore2: 0
+        },
+        {
+          team1: "SC Freiburg",
+          team2: "FC Augsburg",
+          tore1: 3,
+          tore2: 2
+        },
+        {
+          team1: "SC Freiburg",
+          team2: "1.FSV Mainz 05",
+          tore1: 2,
+          tore2: 1
+        },
+        {
+          team1: "SC Freiburg",
+          team2: "1.FC Köln",
+          tore1: 3,
+          tore2: 1
+        },
+        {
+          team1: "SC Freiburg",
+          team2: "SC Paderborn",
+          tore1: 2,
+          tore2: 2
+        },
+        {
           team1: "TSG 1899 Hoffenheim",
           team2: "SG Eintracht Frankfurt",
           tore1: 4,
@@ -379,9 +715,261 @@ export default {
           tore2: 3
         },
         {
+          team1: "TSG 1899 Hoffenheim",
+          team2: "VFL Wolfsburg",
+          tore1: 4,
+          tore2: 4
+        },
+        {
+          team1: "TSG 1899 Hoffenheim",
+          team2: "Hertha BSC",
+          tore1: 3,
+          tore2: 2
+        },
+        {
+          team1: "TSG 1899 Hoffenheim",
+          team2: "Fortuna Düsseldorf",
+          tore1: 0,
+          tore2: 2
+        },
+        {
+          team1: "TSG 1899 Hoffenheim",
+          team2: "FC Augsburg",
+          tore1: 3,
+          tore2: 3
+        },
+        {
+          team1: "TSG 1899 Hoffenheim",
+          team2: "1.FSV Mainz 05",
+          tore1: 1,
+          tore2: 2
+        },
+        {
+          team1: "TSG 1899 Hoffenheim",
+          team2: "1.FC Köln",
+          tore1: 3,
+          tore2: 2
+        },
+        {
+          team1: "TSG 1899 Hoffenheim",
+          team2: "SC Paderborn",
+          tore1: 4,
+          tore2: 0
+        },
+        {
           team1: "SG Eintracht Frankfurt",
           team2: "Bayer 04 Leverkusen",
           tore1: 0,
+          tore2: 1
+        },
+        {
+          team1: "SG Eintracht Frankfurt",
+          team2: "VFL Wolfsburg",
+          tore1: 0,
+          tore2: 3
+        },
+        {
+          team1: "SG Eintracht Frankfurt",
+          team2: "Hertha BSC",
+          tore1: 2,
+          tore2: 0
+        },
+        {
+          team1: "SG Eintracht Frankfurt",
+          team2: "Fortuna Düsseldorf",
+          tore1: 1,
+          tore2: 0
+        },
+        {
+          team1: "SG Eintracht Frankfurt",
+          team2: "FC Augsburg",
+          tore1: 1,
+          tore2: 2
+        },
+        {
+          team1: "SG Eintracht Frankfurt",
+          team2: "1.FSV Mainz 05",
+          tore1: 0,
+          tore2: 3
+        },
+        {
+          team1: "SG Eintracht Frankfurt",
+          team2: "1.FC Köln",
+          tore1: 3,
+          tore2: 0
+        },
+        {
+          team1: "SG Eintracht Frankfurt",
+          team2: "SC Paderborn",
+          tore1: 0,
+          tore2: 0
+        },
+        {
+          team1: "VFL Wolfsburg",
+          team2: "Hertha BSC",
+          tore1: 4,
+          tore2: 0
+        },
+        {
+          team1: "VFL Wolfsburg",
+          team2: "Fortuna Düsseldorf",
+          tore1: 3,
+          tore2: 1
+        },
+        {
+          team1: "VFL Wolfsburg",
+          team2: "FC Augsburg",
+          tore1: 2,
+          tore2: 0
+        },
+        {
+          team1: "VFL Wolfsburg",
+          team2: "1.FSV Mainz 05",
+          tore1: 1,
+          tore2: 2
+        },
+        {
+          team1: "VFL Wolfsburg",
+          team2: "1.FC Köln",
+          tore1: 3,
+          tore2: 1
+        },
+        {
+          team1: "VFL Wolfsburg",
+          team2: "SC Paderborn",
+          tore1: 2,
+          tore2: 0
+        },
+        {
+          team1: "Hertha BSC",
+          team2: "Fortuna Düsseldorf",
+          tore1: 2,
+          tore2: 2
+        },
+        {
+          team1: "Hertha BSC",
+          team2: "FC Augsburg",
+          tore1: 1,
+          tore2: 2
+        },
+        {
+          team1: "Hertha BSC",
+          team2: "1.FSV Mainz 05",
+          tore1: 2,
+          tore2: 1
+        },
+        {
+          team1: "Hertha BSC",
+          team2: "1.FC Köln",
+          tore1: 3,
+          tore2: 0
+        },
+        {
+          team1: "Hertha BSC",
+          team2: "SC Paderborn",
+          tore1: 3,
+          tore2: 2
+        },
+        {
+          team1: "Fortuna Düsseldorf",
+          team2: "FC Augsburg",
+          tore1: 1,
+          tore2: 1
+        },
+        {
+          team1: "Fortuna Düsseldorf",
+          team2: "1.FSV Mainz 05",
+          tore1: 2,
+          tore2: 3
+        },
+        {
+          team1: "Fortuna Düsseldorf",
+          team2: "1.FC Köln",
+          tore1: 0,
+          tore2: 1
+        },
+        {
+          team1: "Fortuna Düsseldorf",
+          team2: "SC Paderborn",
+          tore1: 2,
+          tore2: 0
+        },
+        {
+          team1: "FC Augsburg",
+          team2: "1.FSV Mainz 05",
+          tore1: 3,
+          tore2: 3
+        },
+        {
+          team1: "FC Augsburg",
+          team2: "1.FC Köln",
+          tore1: 2,
+          tore2: 1
+        },
+        {
+          team1: "FC Augsburg",
+          team2: "SC Paderborn",
+          tore1: 2,
+          tore2: 0
+        },
+        {
+          team1: "1.FSV Mainz 05",
+          team2: "1.FC Köln",
+          tore1: 3,
+          tore2: 2
+        },
+        {
+          team1: "1.FSV Mainz 05",
+          team2: "SC Paderborn",
+          tore1: 1,
+          tore2: 0
+        },
+        {
+          team1: "1.FC Köln",
+          team2: "SC Paderborn",
+          tore1: 0,
+          tore2: 0
+        },
+        {
+          team1: "Bayer 04 Leverkusen",
+          team2: "VFL Wolfsburg",
+          tore1: 2,
+          tore2: 1
+        },
+        {
+          team1: "Bayer 04 Leverkusen",
+          team2: "Hertha BSC",
+          tore1: 3,
+          tore2: 2
+        },
+        {
+          team1: "Bayer 04 Leverkusen",
+          team2: "Fortuna Düsseldorf",
+          tore1: 2,
+          tore2: 0
+        },
+        {
+          team1: "Bayer 04 Leverkusen",
+          team2: "FC Augsburg",
+          tore1: 0,
+          tore2: 1
+        },
+        {
+          team1: "Bayer 04 Leverkusen",
+          team2: "1.FSV Mainz 05",
+          tore1: 1,
+          tore2: 1
+        },
+        {
+          team1: "Bayer 04 Leverkusen",
+          team2: "1.FC Köln",
+          tore1: 4,
+          tore2: 3
+        },
+        {
+          team1: "Bayer 04 Leverkusen",
+          team2: "SC Paderborn",
+          tore1: 6,
           tore2: 1
         }
       ],
