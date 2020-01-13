@@ -1120,37 +1120,6 @@ import Vue from 'vue'
 \begin_layout Itemize
 hab dann einfach in dem export default eine data() funktion auf gemacht
  und dort mein Spiel-array rein gemacht
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
