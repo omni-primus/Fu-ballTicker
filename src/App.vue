@@ -53,7 +53,7 @@ table#match tr {
   color: white;
 }
 
-td {
+table#match td {
   text-align: center;
   height: 50px;
 }

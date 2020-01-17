@@ -1,23 +1,23 @@
 <template>
   <div class="Home">
     <h1>Fußball Ticker App</h1>
-    <div v-if="boolean" id="selection">
+    <div v-if="Seitenindex === 1" id="selection">
       <img id="bund-img" src="images/bundesliga-banner.png" @click="open" />
       <details id="bundesliga">
         <summary></summary>
         <Checkboxen></Checkboxen>
-        <button class="button" @click="knopf">
-          Trag meine Teams ein
-        </button>
       </details>
+      <button class="button-save save" @click="knopf">
+        Teams speichern
+      </button>
     </div>
-    <div v-else id="div-main">
+    <div v-else-if="Seitenindex === 2" id="div-main">
       <button
         class="button"
         style="float:left;margin-bottom:20px;margin-left:10px;"
-        @click="boolean = true"
+        @click="Seitenindex = 3"
       >
-        Meine Teamselection
+        Mannschaftsübersicht
       </button>
       <div id="matchresult">
         <table id="match">
@@ -38,6 +38,60 @@
         </table>
       </div>
     </div>
+    <div v-if="Seitenindex === 3" id="teaminfo">
+      <div style="width:100%;height:10px">
+        <button
+          class="button"
+          style="float:left;margin-bottom:20px;margin-left:10px;"
+          @click="Seitenindex = 2"
+        >
+          Zurück zur Tabelle
+        </button>
+        <button
+          class="button-edit edit"
+          style="float:right;margin-bottom:20px;margin-right:10px;"
+          @click="Seitenindex = 1"
+        >
+          Teamauswahl bearbeiten
+        </button>
+      </div>
+      <div style="margin-top:120px;">
+        <details v-for="team in TDetails" id="match" :key="team">
+          <summary>
+            <img
+              :src="assetsPath(team.name)"
+              style="width:100px; height:100px;"
+            />
+          </summary>
+          <table>
+            <tr>
+              <td><b>Mannschaft</b></td>
+              <td>{{ team.name }}</td>
+            </tr>
+            <tr>
+              <td><b>Trainer</b></td>
+              <td>{{ team.trainer }}</td>
+            </tr>
+            <tr>
+              <td><b>Präsident</b></td>
+              <td>{{ team.president }}</td>
+            </tr>
+            <tr>
+              <td><b>Stadion</b></td>
+              <td>{{ team.stadium }}</td>
+            </tr>
+            <tr>
+              <td><b>Gründungsjahr</b></td>
+              <td>{{ team.year }}</td>
+            </tr>
+            <tr>
+              <td><b>Meistertitel</b></td>
+              <td>{{ team.title }}</td>
+            </tr>
+          </table>
+        </details>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -52,7 +106,7 @@ export default {
   },
   data() {
     return {
-      boolean: true,
+      Seitenindex: 1,
       spieltag: [
         {
           team1: "FC Bayern München",
@@ -973,35 +1027,190 @@ export default {
           tore2: 1
         }
       ],
+      MDetails: [
+        {
+          name: "FC Bayern München",
+          year: 1900,
+          president: "Herbert Hainer",
+          trainer: "Hansi Flick",
+          stadium: "Allianz Arena",
+          title: 29
+        },
+        {
+          name: "Borussia Dortmund",
+          year: 1909,
+          president: "Reinhard Rauball",
+          trainer: "Lucien Favre",
+          stadium: "Signal Iduna Park",
+          title: 8
+        },
+        {
+          name: "1.FC Union Berlin",
+          year: 1966,
+          president: "Dirk Zingler",
+          trainer: "Urs Fischer",
+          stadium: "Stadion an der alten Försterei",
+          title: 0
+        },
+        {
+          name: "Borussia Mönchen Gladbach",
+          year: 1900,
+          president: "Rolf Koenigs",
+          trainer: "Marco Rose",
+          stadium: "Borussia Park",
+          title: 5
+        },
+        {
+          name: "RB Leipzig",
+          year: 2009,
+          president: "Oliver Mintzlaff",
+          trainer: "Julian Nagelsmann",
+          stadium: "Red Bull Arena",
+          title: 0
+        },
+        {
+          name: "SC Freiburg",
+          year: 1904,
+          president: "Unknown",
+          trainer: "Christian Streich",
+          stadium: "Schwarzwald-Stadion",
+          title: 0
+        },
+        {
+          name: "TSG 1899 Hoffenheim",
+          year: 1899,
+          president: "Peter Hofmann",
+          trainer: "Alfred Schreuder",
+          stadium: "Prezero-Arena",
+          title: 0
+        },
+        {
+          name: "SG Eintracht Frankfurt",
+          year: 1899,
+          president: "Peter Fischer",
+          trainer: "Adi Hütter",
+          stadium: "Commerzbank Arena",
+          title: 1
+        },
+        {
+          name: "FC Schalke 04",
+          year: 1904,
+          president: "Unknown",
+          trainer: "David Wagner",
+          stadium: "Veltins-Arena",
+          title: 1
+        },
+        {
+          name: "Bayer 04 Leverkusen",
+          year: 1904,
+          president: "Fernando Carro",
+          trainer: "Peter Bosz",
+          stadium: "BayArena",
+          title: 0
+        },
+        {
+          name: "VFL Wolfsburg",
+          year: 1945,
+          president: "Michael Meeske",
+          trainer: "Oliver Glasner",
+          stadium: "Volkswagen Arena",
+          title: 1
+        },
+        {
+          name: "Hertha BSC",
+          year: 1892,
+          president: "Michael Preetz",
+          trainer: "Jürgen Klinsmann",
+          stadium: "Olympiastadion Berlin",
+          title: 2
+        },
+        {
+          name: "Fortuna Düsseldorf",
+          year: 1895,
+          president: "Thomas Röttgermann",
+          trainer: "Friedhelm Funkel",
+          stadium: "Merkur Spiel-Arena",
+          title: 1
+        },
+        {
+          name: "SV Werder Bremen",
+          year: 1899,
+          president: "Hubert Hess-Grunewald",
+          trainer: "Florian Kohfeldt",
+          stadium: "Weserstadion",
+          title: 4
+        },
+        {
+          name: "FC Augsburg",
+          year: 1907,
+          president: "Klaus Hofmann",
+          trainer: "Martin Schmidt",
+          stadium: "WWK Arena",
+          title: 0
+        },
+        {
+          name: "1.FSV Mainz 05",
+          year: 1905,
+          president: "Stefan Hofmann",
+          trainer: "Achim Beierlorer",
+          stadium: "Opel Arena",
+          title: 0
+        },
+        {
+          name: "1.FC Köln",
+          year: 1948,
+          president: "Werner Wolf",
+          trainer: "Markus Gisdol",
+          stadium: "Rheinenergiestadion",
+          title: 3
+        },
+        {
+          name: "SC Paderborn",
+          year: 1985,
+          president: "Elmar Volkmann",
+          trainer: "Steffen Baumgart",
+          stadium: "Benteler-Arena",
+          title: 0
+        }
+      ],
       wahl: [],
-      test: []
+      test: [],
+      TDetails: []
     };
   },
   mounted() {
     let x1 = localStorage.getItem("chosen");
     if (x1 == null) {
-      this.boolean = true;
+      this.Seitenindex = 1;
     } else {
-      this.boolean = false;
+      this.Seitenindex = 2;
       this.getData();
     }
   },
   methods: {
     getData: function() {
-      /* if (localStorage.getItem("chosen")) { */
-      this.wahl = JSON.parse(localStorage.getItem("chosen"));
+      this.wahl = JSON.parse(localStorage.getItem("chosen")); //Teams aus Localstorage in wahl
       for (let i = 0; i < this.spieltag.length; i++) {
+        //Spieltag durchsuchen
         for (let j = 0; j < this.wahl.length; j++) {
-          let temp = 0;
+          //ausgesuchte Teams durchsuchen
+          let temp = false; //Variable für Datensatz gefunden
           if (
             this.spieltag[i].team1 == this.wahl[j] ||
-            this.spieltag[i].team2 == this.wahl[j]
+            this.spieltag[i].team2 == this.wahl[j] //Team an Stelle 1 oder 2?
           ) {
             for (let k = 0; k < this.test.length; k++) {
-              if (this.test[k] == this.spieltag[i]) temp++;
+              if (this.test[k] == this.spieltag[i]) temp = true; //Wenn Spiel schon vorhanden
             }
-            if (temp == 0) this.test.push(this.spieltag[i]);
+            if (temp == false) this.test.push(this.spieltag[i]); //Wenn spiel nicht vorhanden in test pushen
           }
+        }
+      }
+      for (let j = 0; j < this.wahl.length; j++) {
+        for (let l = 0; l < this.MDetails.length; l++) {
+          //Ausgesuchte Mannschaftsdetails in TDetails kopieren
+          if (this.wahl[j] == this.MDetails[l].name)
+            this.TDetails.push(this.MDetails[l]);
         }
       }
     },
@@ -1009,12 +1218,13 @@ export default {
       var checkboxen = document.getElementsByName("checkbox");
       let boxenchecked = [];
       this.test = []; //eventuellen früheren Inhalt löschen
+      this.TDetails = [];
       for (let i = 0; i < checkboxen.length; i++) {
         if (checkboxen[i].checked) {
           boxenchecked.push(checkboxen[i].value);
         }
       }
-      this.boolean = false;
+      this.Seitenindex = 2;
       if (boxenchecked.length != 0) {
         localStorage.setItem("chosen", JSON.stringify(boxenchecked));
       } else localStorage.removeItem("chosen");
@@ -1025,6 +1235,9 @@ export default {
       if (document.getElementById("bundesliga").open == false)
         document.getElementById("bundesliga").open = true;
       else document.getElementById("bundesliga").open = false;
+    },
+    assetsPath: function(file) {
+      return "images/" + file + ".png";
     }
   }
 };
@@ -1039,6 +1252,9 @@ body {
 }
 details summary::-webkit-details-marker {
   display: none;
+}
+summary {
+  background-color:rgba(0, 0, 0, 0);
 }
 #bund-img {
   width: 100%;
@@ -1066,5 +1282,69 @@ details summary::-webkit-details-marker {
   transform: scale(1.05, 1.05);
   -webkit-transform: scale(1.05, 1.05);
   -moz-transform: scale(1.05, 1.05);
+}
+
+.button-edit {
+  background-color: rgb(49, 49, 49);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px 10px;
+}
+
+.button-save {
+  background-color: rgb(49, 49, 49);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  white-space: nowrap;
+  text-align: center;
+  margin-top: 300px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px 10px;
+}
+
+.button-save:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+.button-edit:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+.edit:before {
+  content: "\270E";
+}
+
+.save:before {
+  content: "\2714";
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+td {
+  text-align: left;
+  height: 50px;
 }
 </style>
