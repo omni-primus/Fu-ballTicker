@@ -1,7 +1,7 @@
 <template>
   <div class="Home">
     <h1>Fußball Ticker App</h1>
-    <div v-if="boolean" id="selection">
+    <div v-if="Seitenindex === 1" id="selection">
       <img id="bund-img" src="images/bundesliga-banner.png" @click="open" />
       <details id="bundesliga">
         <summary></summary>
@@ -11,13 +11,20 @@
         </button>
       </details>
     </div>
-    <div v-else id="div-main">
+    <div v-else-if="Seitenindex === 2" id="div-main">
       <button
         class="button"
         style="float:left;margin-bottom:20px;margin-left:10px;"
-        @click="boolean = true"
+        @click="Seitenindex = 1"
       >
         Meine Teamselection
+      </button>
+      <button
+        class="button"
+        style="float:left;margin-bottom:20px;margin-left:10px;"
+        @click="Seitenindex = 3"
+      >
+        Teamübersicht
       </button>
       <div id="matchresult">
         <table id="match">
@@ -38,6 +45,29 @@
         </table>
       </div>
     </div>
+    <div v-if="Seitenindex === 3" id="teaminfo">
+      <div style="width:100%;height:10px">
+        <button
+          class="button"
+          style="float:left;margin-bottom:20px;margin-left:10px;"
+          @click="Seitenindex = 1"
+        >
+          Meine Teamselection
+        </button>
+      </div>
+      <div style="margin-top:120px;">
+        <details v-for="team in wahl" id="match" :key="team">
+          <summary>
+            {{ team }}
+          </summary>
+          Trainer: Hansi Flick
+          <br />
+          Arena/Stadion: Allianz Arena
+          <br />
+          Präsident: Herbert Hainer
+        </details>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -52,7 +82,7 @@ export default {
   },
   data() {
     return {
-      boolean: true,
+      Seitenindex: 1,
       spieltag: [
         {
           team1: "FC Bayern München",
@@ -1013,7 +1043,7 @@ export default {
           boxenchecked.push(checkboxen[i].value);
         }
       }
-      this.boolean = false;
+      this.Seitenindex = 2;
       if (boxenchecked.length != 0) {
         localStorage.setItem("chosen", JSON.stringify(boxenchecked));
       } else localStorage.removeItem("chosen");
@@ -1070,5 +1100,8 @@ details summary::-webkit-details-marker {
   transform: scale(1.05, 1.05);
   -webkit-transform: scale(1.05, 1.05);
   -moz-transform: scale(1.05, 1.05);
+}
+#übersicht {
+  text-align: left;
 }
 </style>
