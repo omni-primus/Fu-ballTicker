@@ -8,6 +8,10 @@
         name="checkbox"
         value="FC Bayern München"
       />
+      <img
+        src="images/FC Bayern München.png"
+        style="width:20px; height:20px;"
+      />
       <span class="checkmark"></span>
     </label>
     <label class="container" for="Borussia Dortmund">
@@ -17,6 +21,10 @@
         type="checkbox"
         name="checkbox"
         value="Borussia Dortmund"
+      />
+      <img
+        src="images/Borussia Dortmund.png"
+        style="width:20px; height:20px;"
       />
       <span class="checkmark"></span>
     </label>
@@ -28,6 +36,10 @@
         name="checkbox"
         value="1.FC Union Berlin"
       />
+      <img
+        src="images/1.FC Union Berlin.png"
+        style="width:20px; height:20px;"
+      />
       <span class="checkmark"></span>
     </label>
     <label class="container" for="Borussia Mönchen Gladbach">
@@ -37,6 +49,10 @@
         type="checkbox"
         name="checkbox"
         value="Borussia Mönchen Gladbach"
+      />
+      <img
+        src="images/Borussia Mönchen Gladbach.png"
+        style="width:20px; height:20px;"
       />
       <span class="checkmark"></span>
     </label>
@@ -48,6 +64,7 @@
         name="checkbox"
         value="RB Leipzig"
       />
+      <img src="images/RB Leipzig.png" style="width:20px; height:20px;" />
       <span class="checkmark"></span>
     </label>
     <label class="container" for="SC Freiburg">
@@ -58,6 +75,7 @@
         name="checkbox"
         value="SC Freiburg"
       />
+       <img src="images/SC Freiburg.png" style="width:20px; height:20px;" />
       <span class="checkmark"></span>
     </label>
     <label class="container" for="TSG 1899 Hoffenheim">
@@ -69,6 +87,10 @@
         value="TSG 1899 Hoffenheim"
       />
       <span class="checkmark"></span>
+      <img
+        src="images/TSG 1899 Hoffenheim.png"
+        style="width:20px; height:20px;"
+      />
     </label>
     <label class="container" for="SG Eintracht Frankfurt">
       SG Eintracht Frankfurt
@@ -77,6 +99,10 @@
         type="checkbox"
         name="checkbox"
         value="SG Eintracht Frankfurt"
+      />
+      <img
+        src="images/SG Eintracht Frankfurt.png"
+        style="width:20px; height:20px;"
       />
       <span class="checkmark"></span>
     </label>
@@ -89,6 +115,7 @@
         value="FC Schalke 04"
       />
       <span class="checkmark"></span>
+      <img src="images/FC Schalke 04.png" style="width:20px; height:20px;" />
     </label>
     <label class="container" for="Bayer 04 Leverkusen">
       Bayer 04 Leverkusen
@@ -99,6 +126,10 @@
         value="Bayer 04 Leverkusen"
       />
       <span class="checkmark"></span>
+      <img
+        src="images/Bayer 04 Leverkusen.png"
+        style="width:20px; height:20px;"
+      />
     </label>
     <label class="container" for="VFL Wolfsburg">
       VFL Wolfsburg
@@ -109,6 +140,7 @@
         value="VFL Wolfsburg"
       />
       <span class="checkmark"></span>
+      <img src="images/VFL Wolfsburg.png" style="width:20px; height:20px;" />
     </label>
     <label class="container" for="Hertha BSC">
       Hertha BSC
@@ -119,6 +151,7 @@
         value="Hertha BSC"
       />
       <span class="checkmark"></span>
+      <img src="images/Hertha BSC.png" style="width:20px; height:20px;" />
     </label>
     <label class="container" for="Fortuna Düsseldorf">
       Fortuna Düsseldorf
@@ -129,6 +162,10 @@
         value="Fortuna Düsseldorf"
       />
       <span class="checkmark"></span>
+      <img
+        src="images/Fortuna Düsseldorf.png"
+        style="width:20px; height:20px;"
+      />
     </label>
     <label class="container" for="SV Werder Bremen">
       SV Werder Bremen
@@ -139,6 +176,7 @@
         value="SV Werder Bremen"
       />
       <span class="checkmark"></span>
+      <img src="images/SV Werder Bremen.png" style="width:20px; height:20px;" />
     </label>
     <label class="container" for="FC Augsburg">
       FC Augsburg
@@ -149,6 +187,7 @@
         value="FC Augsburg"
       />
       <span class="checkmark"></span>
+      <img src="images/FC Augsburg.png" style="width:20px; height:20px;" />
     </label>
     <label class="container" for="1.FSV Mainz 05">
       1.FSV Mainz 05
@@ -159,11 +198,13 @@
         value="1.FSV Mainz 05"
       />
       <span class="checkmark"></span>
+      <img src="images/1.FSV Mainz 05.png" style="width:20px; height:20px;" />
     </label>
     <label class="container" for="1.FC Köln">
       1.FC Köln
       <input id="1.FC Köln" type="checkbox" name="checkbox" value="1.FC Köln" />
       <span class="checkmark"></span>
+      <img src="images/1.FC Köln.png" style="width:20px; height:20px;" />
     </label>
     <label class="container" for="SC Paderborn">
       SC Paderborn
@@ -174,8 +215,11 @@
         value="SC Paderborn"
       />
       <span class="checkmark"></span>
+      <img src="images/SC Paderborn.png" style="width:20px; height:20px;" />
     </label>
-    <button class="button" @click="checkall">Alle auswählen/ entfernen</button>
+    <button class="buttonall" @click="checkall">
+      Alle auswählen/ entfernen
+    </button>
   </div>
 </template>
 
@@ -223,6 +267,27 @@ export default {
 </script>
 
 <style>
+.buttonall {
+  --background: #8d0404;
+  color: rgb(255, 255, 255);
+  padding: 13px 10px;
+  display: inline-block;
+  font-size: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  background: var(--background);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px 10px;
+  border: none;
+}
+
+.buttonall:hover {
+  background-color: #fa4040;
+  transform: scale(1.05, 1.05);
+}
+
 .container {
   display: block;
   position: relative;

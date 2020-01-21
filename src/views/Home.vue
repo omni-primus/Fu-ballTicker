@@ -14,10 +14,20 @@
     <div v-else-if="Seitenindex === 2" id="div-main">
       <button
         class="button"
-        style="float:left;margin-bottom:20px;margin-left:10px;"
+        style="float:right;margin-bottom:20px;margin-left:10px;"
         @click="Seitenindex = 3"
       >
         Mannschaftsübersicht
+      </button>
+      <button
+        class="button"
+        style="float:left;margin-bottom:20px;margin-left:10px;"
+        @click="
+          Seitenindex = 4;
+          berechnetabelle();
+        "
+      >
+        Zur Liga-Tabelle
       </button>
       <div id="matchresult">
         <table id="match">
@@ -45,7 +55,7 @@
           style="float:left;margin-bottom:20px;margin-left:10px;"
           @click="Seitenindex = 2"
         >
-          Zurück zur Tabelle
+          Zurück zu den Ergebnissen
         </button>
         <button
           class="button-edit edit"
@@ -110,13 +120,17 @@
                 {{ match.team1 }}
               </td>
               <td
-                v-else-if="team.name === match.team1 && match.tore1 > match.tore2"
+                v-else-if="
+                  team.name === match.team1 && match.tore1 > match.tore2
+                "
                 class="win"
               >
                 {{ match.team1 }}
               </td>
               <td
-                v-else-if="team.name === match.team1 && match.tore1 === match.tore2"
+                v-else-if="
+                  team.name === match.team1 && match.tore1 === match.tore2
+                "
                 class="draw"
               >
                 {{ match.team1 }}
@@ -132,13 +146,17 @@
                 {{ match.team2 }}
               </td>
               <td
-                v-else-if="team.name === match.team2 && match.tore1 < match.tore2"
+                v-else-if="
+                  team.name === match.team2 && match.tore1 < match.tore2
+                "
                 class="win"
               >
                 {{ match.team2 }}
               </td>
               <td
-                v-else-if="team.name === match.team2 && match.tore1 === match.tore2"
+                v-else-if="
+                  team.name === match.team2 && match.tore1 === match.tore2
+                "
                 class="draw"
               >
                 {{ match.team2 }}
@@ -150,6 +168,46 @@
           </table>
         </details>
       </div>
+    </div>
+    <div v-if="Seitenindex === 4">
+      <button
+        class="button"
+        style="float:right;margin-bottom:20px;margin-left:10px;"
+        @click="Seitenindex = 3"
+      >
+        Mannschaftsübersicht
+      </button>
+      <button
+        class="button"
+        style="float:left;margin-bottom:20px;margin-left:10px;"
+        @click="Seitenindex = 2"
+      >
+        Zu den Ergebnissen
+      </button>
+      <table id="bundestabelle">
+        <tr>
+          <th>Platz</th>
+          <th>Mannschaft</th>
+          <th>Punkte</th>
+          <th>Spiele</th>
+          <th>S</th>
+          <th>U</th>
+          <th>N</th>
+          <th>Tore</th>
+          <th>Diff</th>
+        </tr>
+        <tr v-for="(tabelle, index) in Punkte" :key="tabelle">
+          <td>{{ index + 1 }}</td>
+          <td>{{ tabelle.name }}</td>
+          <td>{{ tabelle.Punkte }}</td>
+          <td>{{ tabelle.Spiele }}</td>
+          <td>{{ tabelle.Siege }}</td>
+          <td>{{ tabelle.Gleich }}</td>
+          <td>{{ tabelle.Niederlagen }}</td>
+          <td>{{ tabelle.Tore }}:{{ tabelle.GT }}</td>
+          <td>{{ tabelle.Dif }}</td>
+        </tr>
+      </table>
     </div>
   </div>
 </template>
@@ -1235,7 +1293,64 @@ export default {
       wahl: [],
       test: [],
       TDetails: [],
-      theme: ""
+      theme: "",
+      Mannschaften: [
+        {
+          name: "FC Bayern München"
+        },
+        {
+          name: "Borussia Dortmund"
+        },
+        {
+          name: "1.FC Union Berlin"
+        },
+        {
+          name: "Borussia Mönchen Gladbach"
+        },
+        {
+          name: "RB Leipzig"
+        },
+        {
+          name: "SC Freiburg"
+        },
+        {
+          name: "TSG 1899 Hoffenheim"
+        },
+        {
+          name: "SG Eintracht Frankfurt"
+        },
+        {
+          name: "FC Schalke 04"
+        },
+        {
+          name: "Bayer 04 Leverkusen"
+        },
+        {
+          name: "VFL Wolfsburg"
+        },
+        {
+          name: "Hertha BSC"
+        },
+        {
+          name: "Fortuna Düsseldorf"
+        },
+        {
+          name: "SV Werder Bremen"
+        },
+        {
+          name: "FC Augsburg"
+        },
+        {
+          name: "1.FSV Mainz 05"
+        },
+        {
+          name: "1.FC Köln"
+        },
+        {
+          name: "SC Paderborn"
+        }
+      ],
+      Punkte: []
     };
   },
   mounted() {
@@ -1298,6 +1413,71 @@ export default {
     },
     assetsPath: function(file) {
       return "images/" + file + ".png";
+    },
+    berechnetabelle: function() {
+      this.Punkte = []; //mögliche Daten erst löschen
+      for (let j = 0; j < this.Mannschaften.length; j++) {
+        let Mpunkte = 0;
+        let goals = 0;
+        let CG = 0;
+        let difference = 0;
+        let games = 0;
+        let wins = 0;
+        let loses = 0;
+        let draws = 0;
+        for (let i = 0; i < this.spieltag.length; i++) {
+          if (this.Mannschaften[j].name == this.spieltag[i].team1) {
+            games++;
+            goals += this.spieltag[i].tore1;
+            CG += this.spieltag[i].tore2;
+            difference += this.spieltag[i].tore1 - this.spieltag[i].tore2;
+            if (this.spieltag[i].tore1 > this.spieltag[i].tore2) {
+              Mpunkte += 3;
+              wins++;
+            } else if (this.spieltag[i].tore2 > this.spieltag[i].tore1) {
+              Mpunkte += 0;
+              loses++;
+            } else if (this.spieltag[i].tore2 == this.spieltag[i].tore1) {
+              Mpunkte += 1;
+              draws++;
+            }
+          } else if (this.Mannschaften[j].name == this.spieltag[i].team2) {
+            games++;
+            goals += this.spieltag[i].tore2;
+            CG += this.spieltag[i].tore1;
+            difference += this.spieltag[i].tore2 - this.spieltag[i].tore1;
+            if (this.spieltag[i].tore1 > this.spieltag[i].tore2) {
+              Mpunkte += 0;
+              loses++;
+            } else if (this.spieltag[i].tore2 > this.spieltag[i].tore1) {
+              Mpunkte += 3;
+              wins++;
+            } else if (this.spieltag[i].tore2 == this.spieltag[i].tore1) {
+              Mpunkte += 1;
+              draws++;
+            }
+          }
+        }
+        this.Punkte.push({
+          name: this.Mannschaften[j].name,
+          Punkte: Mpunkte,
+          Spiele: games,
+          Siege: wins,
+          Niederlagen: loses,
+          Gleich: draws,
+          Tore: goals,
+          GT: CG,
+          Dif: difference
+        });
+        //Tabelle muss sortiert werden
+        this.Punkte.sort(function(a, b) {
+          let points = b.Punkte - a.Punkte;
+          if (points !== 0) {
+            return points;
+          }
+          return b.Dif - a.Dif;
+        });
+      }
     }
   }
 };
@@ -1314,7 +1494,7 @@ details summary::-webkit-details-marker {
   display: none;
 }
 summary {
-  background-color:rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 #bund-img {
   width: 100%;
@@ -1362,8 +1542,8 @@ summary {
 }
 
 .button-save {
-  background-color: rgb(49, 49, 49);
-  border: none;
+  background-color: rgb(5, 158, 0);
+  border: 1px solid white;
   color: white;
   padding: 16px 32px;
   white-space: nowrap;
@@ -1382,6 +1562,7 @@ summary {
 .button-save:hover {
   background-color: #4caf50;
   color: white;
+  transform: scale(1.05, 1.05);
 }
 
 .button-edit:hover {
@@ -1427,5 +1608,22 @@ td.draw {
 }
 #table2 td.mitte {
   width: 10%;
+}
+
+#bundesliga {
+  margin-bottom: 30px;
+}
+
+#bundestabelle {
+  width: 80%;
+  border-collapse: collapse;
+  margin-right: 10%;
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+#bundestabelle th{
+  font-size: 10px;
+  color: rgb(106, 255, 113);
 }
 </style>
