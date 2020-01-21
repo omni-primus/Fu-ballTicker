@@ -14,10 +14,15 @@
   width: 920px;
   margin-left: auto;
   margin-right: auto;
-  background: rgba(0, 0, 0, 0.5);
-  height: 920px;
+  background-image: linear-gradient(
+    to top,
+    rgba(14, 117, 0, 0.3) 20%,
+    rgba(0, 0, 0, 0.5) 50%
+  );
+  height: auto;
   border-radius: 10px 10px;
   padding: 5px;
+  padding-bottom: 30px;
 }
 
 #div-main {
@@ -48,7 +53,7 @@ table#match tr {
   color: white;
 }
 
-td {
+table#match td {
   text-align: center;
   height: 50px;
 }

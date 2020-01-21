@@ -1,145 +1,289 @@
 <template>
   <div>
-    <label class="container" for="FCB">
+    <label class="container" for="FC Bayern München">
       FC Bayern München
       <input
-        id="FCB"
+        id="FC Bayern München"
         type="checkbox"
         name="checkbox"
         value="FC Bayern München"
       />
+      <img
+        src="images/FC Bayern München.png"
+        style="width:20px; height:20px;"
+      />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="BVB">
+    <label class="container" for="Borussia Dortmund">
       Borussia Dortmund
       <input
-        id="BVB"
+        id="Borussia Dortmund"
         type="checkbox"
         name="checkbox"
         value="Borussia Dortmund"
       />
+      <img
+        src="images/Borussia Dortmund.png"
+        style="width:20px; height:20px;"
+      />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="UB">
+    <label class="container" for="1.FC Union Berlin">
       1.FC Union Berlin
       <input
-        id="UB"
+        id="1.FC Union Berlin"
         type="checkbox"
         name="checkbox"
         value="1.FC Union Berlin"
       />
+      <img
+        src="images/1.FC Union Berlin.png"
+        style="width:20px; height:20px;"
+      />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="BMG">
+    <label class="container" for="Borussia Mönchen Gladbach">
       Borussia Mönchen Gladbach
       <input
-        id="BMG"
+        id="Borussia Mönchen Gladbach"
         type="checkbox"
         name="checkbox"
         value="Borussia Mönchen Gladbach"
       />
+      <img
+        src="images/Borussia Mönchen Gladbach.png"
+        style="width:20px; height:20px;"
+      />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="RBL">
+    <label class="container" for="RB Leipzig">
       RB Leipzig
-      <input id="RBL" type="checkbox" name="checkbox" value="RB Leipzig" />
+      <input
+        id="RB Leipzig"
+        type="checkbox"
+        name="checkbox"
+        value="RB Leipzig"
+      />
+      <img src="images/RB Leipzig.png" style="width:20px; height:20px;" />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="SCF">
+    <label class="container" for="SC Freiburg">
       SC Freiburg
-      <input id="SCF" type="checkbox" name="checkbox" value="SC Freiburg" />
+      <input
+        id="SC Freiburg"
+        type="checkbox"
+        name="checkbox"
+        value="SC Freiburg"
+      />
+      <img src="images/SC Freiburg.png" style="width:20px; height:20px;" />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="TSGH">
+    <label class="container" for="TSG 1899 Hoffenheim">
       TSG 1899 Hoffenheim
       <input
-        id="TSGH"
+        id="TSG 1899 Hoffenheim"
         type="checkbox"
         name="checkbox"
         value="TSG 1899 Hoffenheim"
       />
+      <img
+        src="images/TSG 1899 Hoffenheim.png"
+        style="width:20px; height:20px;"
+      />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="SGEF">
+    <label class="container" for="SG Eintracht Frankfurt">
       SG Eintracht Frankfurt
       <input
-        id="SGEF"
+        id="SG Eintracht Frankfurt"
         type="checkbox"
         name="checkbox"
         value="SG Eintracht Frankfurt"
       />
+      <img
+        src="images/SG Eintracht Frankfurt.png"
+        style="width:20px; height:20px;"
+      />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="FCS04">
+    <label class="container" for="FC Schalke 04">
       FC Schalke 04
-      <input id="FCS04" type="checkbox" name="checkbox" value="FC Schalke 04" />
+      <input
+        id="FC Schalke 04"
+        type="checkbox"
+        name="checkbox"
+        value="FC Schalke 04"
+      />
+      <img src="images/FC Schalke 04.png" style="width:20px; height:20px;" />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="BL">
+    <label class="container" for="Bayer 04 Leverkusen">
       Bayer 04 Leverkusen
       <input
-        id="BL"
+        id="Bayer 04 Leverkusen"
         type="checkbox"
         name="checkbox"
         value="Bayer 04 Leverkusen"
       />
+      <img
+        src="images/Bayer 04 Leverkusen.png"
+        style="width:20px; height:20px;"
+      />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="VFLW">
+    <label class="container" for="VFL Wolfsburg">
       VFL Wolfsburg
-      <input id="VFLW" type="checkbox" name="checkbox" value="VFL Wolfsburg" />
+      <input
+        id="VFL Wolfsburg"
+        type="checkbox"
+        name="checkbox"
+        value="VFL Wolfsburg"
+      />
+      <img src="images/VFL Wolfsburg.png" style="width:20px; height:20px;" />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="HBSC">
+    <label class="container" for="Hertha BSC">
       Hertha BSC
-      <input id="HBSC" type="checkbox" name="checkbox" value="Hertha BSC" />
+      <input
+        id="Hertha BSC"
+        type="checkbox"
+        name="checkbox"
+        value="Hertha BSC"
+      />
+      <img src="images/Hertha BSC.png" style="width:20px; height:20px;" />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="FD">
+    <label class="container" for="Fortuna Düsseldorf">
       Fortuna Düsseldorf
       <input
-        id="FD"
+        id="Fortuna Düsseldorf"
         type="checkbox"
         name="checkbox"
         value="Fortuna Düsseldorf"
       />
+      <img
+        src="images/Fortuna Düsseldorf.png"
+        style="width:20px; height:20px;"
+      />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="WB">
+    <label class="container" for="SV Werder Bremen">
       SV Werder Bremen
-      <input id="WB" type="checkbox" name="checkbox" value="Sv Werder Bremen" />
+      <input
+        id="SV Werder Bremen"
+        type="checkbox"
+        name="checkbox"
+        value="SV Werder Bremen"
+      />
+      <img src="images/SV Werder Bremen.png" style="width:20px; height:20px;" />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="FCA">
+    <label class="container" for="FC Augsburg">
       FC Augsburg
-      <input id="FCA" type="checkbox" name="checkbox" value="FC Augsburg" />
+      <input
+        id="FC Augsburg"
+        type="checkbox"
+        name="checkbox"
+        value="FC Augsburg"
+      />
+      <img src="images/FC Augsburg.png" style="width:20px; height:20px;" />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="M05">
-      1. FSV Mainz 05
-      <input id="M05" type="checkbox" name="checkbox" value="1.FSV Mainz 05" />
+    <label class="container" for="1.FSV Mainz 05">
+      1.FSV Mainz 05
+      <input
+        id="1.FSV Mainz 05"
+        type="checkbox"
+        name="checkbox"
+        value="1.FSV Mainz 05"
+      />
+      <img src="images/1.FSV Mainz 05.png" style="width:20px; height:20px;" />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="FCK">
-      1. FC Köln
-      <input id="FCK" type="checkbox" name="checkbox" value="1.FC Köln" />
+    <label class="container" for="1.FC Köln">
+      1.FC Köln
+      <input id="1.FC Köln" type="checkbox" name="checkbox" value="1.FC Köln" />
+      <img src="images/1.FC Köln.png" style="width:20px; height:20px;" />
       <span class="checkmark"></span>
     </label>
-    <label class="container" for="SCP">
+    <label class="container" for="SC Paderborn">
       SC Paderborn
-      <input id="SCP" type="checkbox" name="checkbox" value="SC Paderborn" />
+      <input
+        id="SC Paderborn"
+        type="checkbox"
+        name="checkbox"
+        value="SC Paderborn"
+      />
+      <img src="images/SC Paderborn.png" style="width:20px; height:20px;" />
       <span class="checkmark"></span>
     </label>
+    <button class="button" style="" @click="checkall">Alle auswählen/ entfernen</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Checkboxen"
+  name: "Checkboxen",
+  data() {
+    return {
+      x1: [],
+      x2: []
+    };
+  },
+  mounted() {
+    this.checkthebox();
+  },
+  methods: {
+    checkthebox() {
+      this.x1 = JSON.parse(localStorage.getItem("chosen"));
+      for (let i = 0; i < this.x1.length; i++) {
+        let el = document.getElementById(this.x1[i]);
+        el.checked = true;
+      }
+    },
+    checkall: function() {
+      let el = document.getElementsByName("checkbox");
+      for (let j = 0; j < el.length; j++) {
+        if (el[j].checked == true) {
+          this.x2.push(j);
+        }
+      }
+      if (this.x2.length == 0) {
+        for (let i = 0; i < el.length; i++) {
+          el[i].checked = true;
+        }
+      } else {
+        for (let i = 0; i < this.x2.length; i++) {
+          let wert = this.x2[i];
+          el[wert].checked = false;
+        }
+        this.x2 = [];
+      }
+    }
+  }
 };
 </script>
 
 <style>
+.button {
+  --background: #8d0404;
+  color: rgb(255, 255, 255);
+  padding: 13px 10px;
+  display: inline-block;
+  font-size: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  background: var(--background);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px 10px;
+  border: none;
+}
+
+.button:hover {
+  background-color: #fa4040;
+}
 .container {
   display: block;
   position: relative;
@@ -151,6 +295,7 @@ export default {
   -ms-user-select: none;
   user-select: none;
 }
+
 .container input {
   position: absolute;
   opacity: 0;
@@ -158,6 +303,7 @@ export default {
   height: 0;
   width: 0;
 }
+
 .checkmark {
   position: absolute;
   top: 0;
@@ -166,20 +312,25 @@ export default {
   width: 25px;
   background-color: #eee;
 }
+
 .container:hover input ~ .checkmark {
   background-color: #ccc;
 }
+
 .container input:checked ~ .checkmark {
   background-color: #2196f3;
 }
+
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
+
 .container input:checked ~ .checkmark:after {
   display: block;
 }
+
 .container .checkmark:after {
   left: 9px;
   top: 5px;
@@ -191,6 +342,7 @@ export default {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 @media (max-width: 385px) {
   .checkmark {
     left: 0px;
