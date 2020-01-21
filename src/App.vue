@@ -43,6 +43,19 @@ table#match {
   margin-right: 10%;
   margin-left: 10%;
   font-size: 20px;
+  text-align: center;
+}
+table#table2 {
+  width: 80%;
+  border-collapse: collapse;
+  margin-right: 10%;
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+table#table2 td {
+  text-align: center;
+  height: 50px;
 }
 table#match tr:nth-child(even) {
   background-color: #66ff6e;
@@ -56,6 +69,12 @@ table#match tr {
 table#match td {
   text-align: center;
   height: 50px;
+  width: 45%;
+}
+table#match td.mitte {
+  text-align: center;
+  height: 50px;
+  width: 10%;
 }
 @media (max-width: 920px) {
   #app {

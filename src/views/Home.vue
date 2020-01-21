@@ -31,7 +31,7 @@
           <tbody>
             <tr v-for="team in test" :key="team">
               <td>{{ team.team1 }}</td>
-              <td>{{ team.tore1 }}:{{ team.tore2 }}</td>
+              <td class="mitte">{{ team.tore1 }}:{{ team.tore2 }}</td>
               <td>{{ team.team2 }}</td>
             </tr>
           </tbody>
@@ -87,6 +87,65 @@
             <tr>
               <td><b>Meistertitel</b></td>
               <td>{{ team.title }}</td>
+            </tr>
+          </table>
+
+          <p style="text-align:left;font-size:20px; padding-left:20px;">
+            Letzten 5 Spiele:
+          </p>
+          <table id="table2">
+            <tr
+              v-for="match in spieltag
+                .filter(
+                  spieltag =>
+                    team.name === spieltag.team1 || team.name === spieltag.team2
+                )
+                .slice(0, 5)"
+              :key="match"
+            >
+              <td
+                v-if="team.name === match.team1 && match.tore1 < match.tore2"
+                class="lose"
+              >
+                {{ match.team1 }}
+              </td>
+              <td
+                v-else-if="team.name === match.team1 && match.tore1 > match.tore2"
+                class="win"
+              >
+                {{ match.team1 }}
+              </td>
+              <td
+                v-else-if="team.name === match.team1 && match.tore1 === match.tore2"
+                class="draw"
+              >
+                {{ match.team1 }}
+              </td>
+              <td v-else class="links">
+                {{ match.team1 }}
+              </td>
+              <td class="mitte">{{ match.tore1 }}:{{ match.tore2 }}</td>
+              <td
+                v-if="team.name === match.team2 && match.tore1 > match.tore2"
+                class="lose"
+              >
+                {{ match.team2 }}
+              </td>
+              <td
+                v-else-if="team.name === match.team2 && match.tore1 < match.tore2"
+                class="win"
+              >
+                {{ match.team2 }}
+              </td>
+              <td
+                v-else-if="team.name === match.team2 && match.tore1 === match.tore2"
+                class="draw"
+              >
+                {{ match.team2 }}
+              </td>
+              <td v-else class="rechts">
+                {{ match.team2 }}
+              </td>
             </tr>
           </table>
         </details>
@@ -1175,7 +1234,8 @@ export default {
       ],
       wahl: [],
       test: [],
-      TDetails: []
+      TDetails: [],
+      theme: ""
     };
   },
   mounted() {
@@ -1346,5 +1406,26 @@ table {
 td {
   text-align: left;
   height: 50px;
+}
+td.lose {
+  background-color: rgb(202, 43, 43);
+  width: 40%;
+}
+td.win {
+  background-color: rgb(53, 230, 68);
+  width: 40%;
+}
+td.draw {
+  background-color: rgb(151, 151, 151);
+  width: 40%;
+}
+#table2 td.links {
+  width: 45%;
+}
+#table2 td.rechts {
+  width: 45%;
+}
+#table2 td.mitte {
+  width: 10%;
 }
 </style>
