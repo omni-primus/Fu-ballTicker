@@ -76,6 +76,12 @@ table#match td.mitte {
   height: 50px;
   width: 10%;
 }
+h2 {
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
 @media (max-width: 920px) {
   #app {
     width: 100%;

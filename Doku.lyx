@@ -7,7 +7,7 @@
 \textclass article
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language ngerman
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -29,6 +29,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -44,6 +45,7 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -61,7 +63,7 @@
 \paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
-\quotes_style english
+\quotes_style german
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
@@ -97,7 +99,11 @@ Tag 1: 14.10.2019
 \end_layout
 
 \begin_layout Itemize
-Idee Festlegung: Fußball-App -> Ergebnisse von Fußballspielen anzeigen
+Idee Festlegung: Fußball-App -> Ergebnisse 
+\lang german
+von
+\lang ngerman
+ Fußballspielen anzeigen
 \end_layout
 
 \begin_layout Itemize
@@ -249,13 +255,13 @@ pushed
 \end_layout
 
 \begin_layout Itemize
-versuche eine funktion zu schreiben die beim ersten aufruf der seite einen
+versuche eine Funktion zu schreiben die beim ersten aufruf der Seite einen
  bestimmten div sichtbar macht, sonst ausblendet
 \end_layout
 
 \begin_layout Itemize
 zuerst hab ich versucht einen Cookie zu setzten und damit zu checken ob
- man die Seite schonmal besucht hat
+ man die Seite schon mal besucht hat
 \end_layout
 
 \begin_layout Itemize
@@ -291,7 +297,7 @@ none
 
 \begin_layout Plain Layout
 
-	<p>Text</p>
+ <p>Text</p>
 \end_layout
 
 \begin_layout Plain Layout
@@ -316,142 +322,142 @@ methods: {
 
 \begin_layout Plain Layout
 
-	GetCookie: function(name){
+ GetCookie: function(name){
 \end_layout
 
 \begin_layout Plain Layout
 
-		var arg = name + "=";
+  var arg = name + "=";
 \end_layout
 
 \begin_layout Plain Layout
 
-		var alen = arg.length;
+  var alen = arg.length;
 \end_layout
 
 \begin_layout Plain Layout
 
-        var clen = document.cookie.length;
+  var clen = document.cookie.length;
 \end_layout
 
 \begin_layout Plain Layout
 
-        var i = 0;
+  var i = 0;
 \end_layout
 
 \begin_layout Plain Layout
 
-        while (i < clen) {
+  while (i < clen) {
 \end_layout
 
 \begin_layout Plain Layout
 
-            var j = i + alen;
+   var j = i + alen;
 \end_layout
 
 \begin_layout Plain Layout
 
-               if (document.cookie.substring(i, j) == arg)
+   if (document.cookie.substring(i, j) == arg)
 \end_layout
 
 \begin_layout Plain Layout
 
-                    return "here";
+    return "here";
 \end_layout
 
 \begin_layout Plain Layout
 
-                i = document.cookie.indexOf(" ", i) + 1;
+   i = document.cookie.indexOf(" ", i) + 1;
 \end_layout
 
 \begin_layout Plain Layout
 
-                if (i == 0)
+   if (i == 0)
 \end_layout
 
 \begin_layout Plain Layout
 
-                     break;
+    break;
 \end_layout
 
 \begin_layout Plain Layout
 
-        }
+  }
 \end_layout
 
 \begin_layout Plain Layout
 
-        return null;
+  return null;
 \end_layout
 
 \begin_layout Plain Layout
 
-	}
+ }
 \end_layout
 
 \begin_layout Plain Layout
 
-	showfirst: function(){
+ showfirst: function(){
 \end_layout
 
 \begin_layout Plain Layout
 
-		let erster = document.getElementById("#erster");
+  let erster = document.getElementById("#erster");
 \end_layout
 
 \begin_layout Plain Layout
 
-	    erster.style.display = "inline";
+  erster.style.display = "inline";
 \end_layout
 
 \begin_layout Plain Layout
 
-	}
+ }
 \end_layout
 
 \begin_layout Plain Layout
 
-	beforeMount: function(){
+ beforeMount: function(){
 \end_layout
 
 \begin_layout Plain Layout
 
-		let visit = GetCookie("COOKIE1");
+  let visit = GetCookie("COOKIE1");
 \end_layout
 
 \begin_layout Plain Layout
 
-		if (visit == null){
+  if (visit == null){
 \end_layout
 
 \begin_layout Plain Layout
 
-        	showfirst();
+   showfirst();
 \end_layout
 
 \begin_layout Plain Layout
 
-		}
+  }
 \end_layout
 
 \begin_layout Plain Layout
 
-	    let expire=new Date();
+  let expire=new Date();
 \end_layout
 
 \begin_layout Plain Layout
 
-	    expire = new Date(expire.getTime() + 7776000000);
+  expire = new Date(expire.getTime() + 7776000000);
 \end_layout
 
 \begin_layout Plain Layout
 
-	    document.cookie="COOKIE1=here; expires=" + expire;
+  document.cookie="COOKIE1=here; expires=" + expire;
 \end_layout
 
 \begin_layout Plain Layout
 
-	}
+ }
 \end_layout
 
 \begin_layout Plain Layout
@@ -465,7 +471,7 @@ methods: {
 \end_layout
 
 \begin_layout Itemize
-ich bekomme zwar kein fehler aber es funktioniert nicht 
+ich bekomme zwar kein Fehler aber es funktioniert nicht 
 \end_layout
 
 \begin_layout Itemize
@@ -506,17 +512,17 @@ Tag 5 25.11.2019
 \end_layout
 
 \begin_layout Itemize
-auf Empfehlung die Cookie angelegenheit gelöscht und auf local storage zurückgeg
+auf Empfehlung die Cookie Angelegenheit gelöscht und auf local storage zurückgeg
 riffen
 \end_layout
 
 \begin_layout Itemize
 beim ersten Aufruf wird nun die Auswahl angezeigt und beim zweiten mal nicht
- -> später ändern, dass wenn nur nich angezeigt wird wenn keine Teams gesetzt
+ -> später ändern, dass wenn nur nicht angezeigt wird wenn keine Teams gesetzt
 \end_layout
 
 \begin_layout Itemize
-neue vue sachen entdeckt: vue-if, else -> komischer Syntax
+neue vue Sachen entdeckt: vue-if, else -> komischer Syntax
 \end_layout
 
 \begin_layout Section
@@ -524,12 +530,20 @@ Tag 6 09.12.2019
 \end_layout
 
 \begin_layout Itemize
-hab vergeblich versucht einen Button zu erstellen der auf ein externes script
+hab vergeblich versucht einen Button zu erstellen der auf ein externes Script
  zugreift
 \end_layout
 
 \begin_layout Itemize
-hab ein <a> der mittels v-on:click die Funktion knopf aufruft
+hab ein <a> der mittels v-on:click die Funktion 
+\begin_inset Quotes gld
+\end_inset
+
+knopf
+\begin_inset Quotes grd
+\end_inset
+
+ aufruft
 \end_layout
 
 \begin_layout Itemize
@@ -538,7 +552,7 @@ in der Funktion ist dann die Animation enthalten die beim drücken geschehen
 \end_layout
 
 \begin_layout Itemize
-<script> in index bewirkt nichts
+<script> in Index bewirkt nichts
 \end_layout
 
 \begin_layout Standard
@@ -548,8 +562,27 @@ status open
 
 \begin_layout Plain Layout
 
-<script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/
-gsap/2.1.3/TweenMax.min.js" ></script>
+<script
+\end_layout
+
+\begin_layout Plain Layout
+
+ type="application/javascript"
+\end_layout
+
+\begin_layout Plain Layout
+
+ src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+\end_layout
+
+\begin_layout Plain Layout
+
+>
+\end_layout
+
+\begin_layout Plain Layout
+
+</script>
 \end_layout
 
 \end_inset
@@ -569,7 +602,7 @@ mounted(){
 
 \begin_layout Plain Layout
 
-	let scripts = document.createElement(
+ let scripts = document.createElement(
 \begin_inset Quotes eld
 \end_inset
 
@@ -582,7 +615,12 @@ script
 
 \begin_layout Plain Layout
 
-	scripts.setAttribute(
+ scripts.setAttribute(
+\end_layout
+
+\begin_layout Plain Layout
+
+  
 \begin_inset Quotes eld
 \end_inset
 
@@ -590,12 +628,26 @@ src
 \begin_inset Quotes erd
 \end_inset
 
-,"https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js");
+,
 \end_layout
 
 \begin_layout Plain Layout
 
-	document.head.appendChild(scripts);
+  
+\begin_inset Quotes eld
+\end_inset
+
+https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+\end_layout
+
+\begin_layout Plain Layout
+
+ );
+\end_layout
+
+\begin_layout Plain Layout
+
+ document.head.appendChild(scripts);
 \end_layout
 
 \begin_layout Plain Layout
@@ -623,8 +675,7 @@ status open
 
 \begin_layout Plain Layout
 
-npm install --save "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js?
-vue&type=script&lang=js"
+npm install --save "https://cdnjs[...].js?vue&type=script&lang=js"
 \end_layout
 
 \end_inset
@@ -648,52 +699,57 @@ SomeComponent: () => {
 
 \begin_layout Plain Layout
 
-	let vm = this;
+ let vm = this;
 \end_layout
 
 \begin_layout Plain Layout
 
-	return new Promise((resolve, reject) => {
+ return new Promise((resolve, reject) => {
 \end_layout
 
 \begin_layout Plain Layout
 
-	let script = document.createElement("script");
+  let script = document.createElement("script");
 \end_layout
 
 \begin_layout Plain Layout
 
-	script.onload = () => {
+  script.onload = () => {
 \end_layout
 
 \begin_layout Plain Layout
 
-		resolve(import(SomeComponent));
+   resolve(import(SomeComponent));
 \end_layout
 
 \begin_layout Plain Layout
 
-		script.async = true;
+   script.async = true;
 \end_layout
 
 \begin_layout Plain Layout
 
-		script.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js";
+   script.src = 
 \end_layout
 
 \begin_layout Plain Layout
 
-		document.head.appendChild(script);
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js";
 \end_layout
 
 \begin_layout Plain Layout
 
-		};
+   document.head.appendChild(script);
 \end_layout
 
 \begin_layout Plain Layout
 
-	})
+  };
+\end_layout
+
+\begin_layout Plain Layout
+
+ })
 \end_layout
 
 \begin_layout Plain Layout
@@ -726,168 +782,168 @@ knopf: function(event) {
 
 \begin_layout Plain Layout
 
-	let duration = 3000, 
+ let duration = 3000, 
 \end_layout
 
 \begin_layout Plain Layout
 
-	btn = event.target,
+ btn = event.target,
 \end_layout
 
 \begin_layout Plain Layout
 
-	svg = btn.find("svg"),
+ svg = btn.find("svg"),
 \end_layout
 
 \begin_layout Plain Layout
 
-	svgPath = new Proxy( {
+ svgPath = new Proxy( {
 \end_layout
 
 \begin_layout Plain Layout
 
-		y: null,
+  y: null,
 \end_layout
 
 \begin_layout Plain Layout
 
-		smoothing: null
+  smoothing: null
 \end_layout
 
 \begin_layout Plain Layout
 
-	},
+ },
 \end_layout
 
 \begin_layout Plain Layout
 
-	{
+ {
 \end_layout
 
 \begin_layout Plain Layout
 
-		set(target, key, value) {
+  set(target, key, value) {
 \end_layout
 
 \begin_layout Plain Layout
 
-			target[key] = value;
+   target[key] = value;
 \end_layout
 
 \begin_layout Plain Layout
 
-			if (target.y !== null && target.smoothing !== null) {
+   if (target.y !== null && target.smoothing !== null) {
 \end_layout
 
 \begin_layout Plain Layout
 
-				svg.html(getPath(target.y, target.smoothing, null));
+    svg.html(getPath(target.y, target.smoothing, null));
 \end_layout
 
 \begin_layout Plain Layout
 
-			}
+   }
 \end_layout
 
 \begin_layout Plain Layout
 
-			return true;
+   return true;
 \end_layout
 
 \begin_layout Plain Layout
 
-		},
+  },
 \end_layout
 
 \begin_layout Plain Layout
 
-		get(target, key) {
+  get(target, key) {
 \end_layout
 
 \begin_layout Plain Layout
 
-			return target[key];
+   return target[key];
 \end_layout
 
 \begin_layout Plain Layout
 
-		}
+  }
 \end_layout
 
 \begin_layout Plain Layout
 
-	});
+ });
 \end_layout
 
 \begin_layout Plain Layout
 
-	btn.css("--duration", duration);
+ btn.css("--duration", duration);
 \end_layout
 
 \begin_layout Plain Layout
 
-	svgPath.y = 20;
+ svgPath.y = 20;
 \end_layout
 
 \begin_layout Plain Layout
 
-	svgPath.smoothing = 0;
+ svgPath.smoothing = 0;
 \end_layout
 
 \begin_layout Plain Layout
 
-	if (event) { 
+ if (event) { 
 \end_layout
 
 \begin_layout Plain Layout
 
-		if (!btn.hasClass("loading")) {
+  if (!btn.hasClass("loading")) {
 \end_layout
 
 \begin_layout Plain Layout
 
-			btn.addClass("loading");
+   btn.addClass("loading");
 \end_layout
 
 \begin_layout Plain Layout
 
-			TweenMax.to(svgPath, (duration * 0.065) / 1000, { smoothing: 0.3});
+   TweenMax.to(svgPath, (duration * 0.065) / 1000, { smoothing: 0.3});
 \end_layout
 
 \begin_layout Plain Layout
 
-			TweenMax.to(svgPath, (duration * 0.265) / 1000, { 
+   TweenMax.to(svgPath, (duration * 0.265) / 1000, { 
 \end_layout
 
 \begin_layout Plain Layout
 
-				y: 12, ease: Elastic.easeOut.config(1.12, 0.4)}).delay((duration * 0.065)
+    y: 12, ease: Elastic.easeOut.config(1.12, 0.4)}).delay((duration * 0.065)
  / 1000);
 \end_layout
 
 \begin_layout Plain Layout
 
-				setTimeout(() => { svg.html(getPath(0, 0, [[3, 14], [8, 19], [21, 6]]));
+	setTimeout(() => { svg.html(getPath(0, 0, [[3, 14], [8, 19], [21, 6]]));
 \end_layout
 
 \begin_layout Plain Layout
 
-			}, duration / 2);
+   }, duration / 2);
 \end_layout
 
 \begin_layout Plain Layout
 
-		}
+  }
 \end_layout
 
 \begin_layout Plain Layout
 
-		return false;
+  return false;
 \end_layout
 
 \begin_layout Plain Layout
 
-	}
+ }
 \end_layout
 
 \begin_layout Plain Layout
@@ -901,7 +957,7 @@ knopf: function(event) {
 \end_layout
 
 \begin_layout Itemize
-nach langem rumprobieren habe ich erstmal alles rausgenommen und den Knopf
+nach langem rumprobieren habe ich erstmal alles raus genommen und den Knopf
  selber neu geschrieben
 \end_layout
 
@@ -911,7 +967,7 @@ neues Problem: wenn ich auf den Knopf drücke passiert nichts
 
 \begin_layout Itemize
 Fehler gefunden: der Linter hat mir einen falschen Tipp gegeben er wollte
- dass ich bei dem on click event statt 
+ dass ich bei dem on click Event statt 
 \begin_inset Quotes eld
 \end_inset
 
@@ -958,7 +1014,7 @@ gecheckt
 \end_layout
 
 \begin_layout Itemize
-mein plan ist es alle teams in einem array zu haben, damit ich sie dann
+mein plan ist es alle Teams in einem Array zu haben, damit ich sie dann
  später abrufen kann
 \end_layout
 
@@ -975,12 +1031,12 @@ phpMyAdmin, php, ein Apache Server und MsSql Server installiert
 \end_layout
 
 \begin_layout Itemize
-eine Datenbank erstellt und eine Tabelle mit allen Bundesliga Teams + infos
+eine Datenbank erstellt und eine Tabelle mit allen Bundesliga Teams + Infos
 \end_layout
 
 \begin_layout Itemize
 nach mehrstündigem Versuchen das alles mit dem Vue Projekt zu verbinden
- habe ich herrausgefunden, dass php und Vue überhaupt nicht mit einander
+ habe ich herausgefunden, dass php und Vue überhaupt nicht mit einander
  klar kommen und hab es sein lassen
 \end_layout
 
@@ -1003,19 +1059,24 @@ Bild3: Datenbank + Tabelle
 \end_layout
 
 \begin_layout Itemize
+Codereview: 
+\end_layout
+
+\begin_layout Itemize
 Auf Nachfrage wie ich das Datenbankproblem lösen kann, wurde uns klar gemacht,
  dass eine Datenbank zwar cool wäre, aber zeitlich für uns nicht realisierbar
  mehr ist und etwas zu kompliziert
 \end_layout
 
 \begin_layout Itemize
-des weiteren ist die bisherige Struktur des Projektes nicht zufriedenstelltend
+des weiteren ist die bisherige Struktur des Projektes nicht zufriedenstellend
  gewesen, da die Möglichkeiten von Vue von uns noch nicht wirklich genutzt
  wurden
 \end_layout
 
 \begin_layout Itemize
-Auf Grund dieser Erkenntisse müssen wir ein paar unserer Projektpunkte ändern:
+Auf Grund dieser Erkenntnisse müssen wir ein paar unserer Projektpunkte
+ ändern:
 \end_layout
 
 \begin_deeper
@@ -1051,13 +1112,12 @@ haben dann 4,5 Stunden daran gesessen uns mit Vue weiter vertraut zu machen
 \end_layout
 
 \begin_layout Itemize
-Da der gestriege Tag sehr niederschmetternd war hab ich mich nochmal an
- das Problem gesetzt
+Da der gestrige Tag sehr niederschmetternd war hab ich mich nochmal an das
+ Problem gesetzt
 \end_layout
 
 \begin_layout Itemize
-ich hab unsere Checkboxen zuerst als Component ausgelaggert um Platz zu
- schaffen
+ich hab unsere Checkboxen zuerst als Component ausgelagert um Platz zu schaffen
 \end_layout
 
 \begin_layout Itemize
@@ -1118,8 +1178,8 @@ import Vue from 'vue'
 \end_layout
 
 \begin_layout Itemize
-hab dann einfach in dem export default eine data() funktion auf gemacht
- und dort mein Spiel-array rein gemacht
+hab dann einfach in dem export default eine data() Funktion auf gemacht
+ und dort mein Spiel-Array rein gemacht
 \end_layout
 
 \begin_layout Standard
@@ -1134,52 +1194,52 @@ data() {
 
 \begin_layout Plain Layout
 
-	return {
+ return {
 \end_layout
 
 \begin_layout Plain Layout
 
-		spieltag: [
+  spieltag: [
 \end_layout
 
 \begin_layout Plain Layout
 
-			{
+   {
 \end_layout
 
 \begin_layout Plain Layout
 
-				team1: "FC Bayern München",
+	team1: "FC Bayern München",
 \end_layout
 
 \begin_layout Plain Layout
 
-				team2: "FC Schalke 04",
+	team2: "FC Schalke 04",
 \end_layout
 
 \begin_layout Plain Layout
 
-				tore1: 2,
+	tore1: 2,
 \end_layout
 
 \begin_layout Plain Layout
 
-				tore2: 0
+	tore2: 0
 \end_layout
 
 \begin_layout Plain Layout
 
-			} //und so weiter
+   }, //und so weiter
 \end_layout
 
 \begin_layout Plain Layout
 
-		]
+  ]
 \end_layout
 
 \begin_layout Plain Layout
 
-	}
+ }
 \end_layout
 
 \begin_layout Plain Layout
@@ -1209,17 +1269,17 @@ status open
 
 \begin_layout Plain Layout
 
-	<td>{{ team.team1 }}</td>
+ <td>{{ team.team1 }}</td>
 \end_layout
 
 \begin_layout Plain Layout
 
-	<td>{{ team.tore1 }}:{{ team.tore2 }}</td>
+ <td>{{ team.tore1 }}:{{ team.tore2 }}</td>
 \end_layout
 
 \begin_layout Plain Layout
 
-	<td>{{ team.team2 }}</td>
+ <td>{{ team.team2 }}</td>
 \end_layout
 
 \begin_layout Plain Layout
@@ -1233,7 +1293,7 @@ status open
 \end_layout
 
 \begin_layout Itemize
-nach Stunden bugfixing habe ich es endlich geschaft die Spiele auszugeben
+nach Stunden Bug-Fixing habe ich es endlich geschafft die Spiele auszugeben
 \end_layout
 
 \begin_layout Itemize
@@ -1300,7 +1360,7 @@ responsive Design
 \end_layout
 
 \begin_layout Itemize
-Banner zum Auklappen einer Liga
+Banner zum Aufklappen einer Liga
 \end_layout
 
 \end_deeper
@@ -1324,5 +1384,370 @@ Neu laden der Seite bei vorhandenen Teams im Local Storage sorgt dafür das
 \end_layout
 
 \end_deeper
+\begin_layout Section
+13.01.2020
+\end_layout
+
+\begin_layout Itemize
+Anfangsrunde wo jeder sagt was er vor hat fand ich recht sinnlos, da mir
+ das auch so schon klar ist und eigentlich nur Zeit verloren gegangen ist
+ in der ich hätte Fragen stellen können
+\end_layout
+
+\begin_layout Itemize
+Checkbox Design überarbeitet
+\end_layout
+
+\begin_layout Itemize
+Button hinzugefügt womit man alle Teams auswählen oder auch entfernen kann
+ -> Nutzerfreundlichkeit
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Bilder/Checkboxen.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+dafür habe ich eine Funktion geschrieben, die erst guckt ob etwas ausgewählt
+ ist, wenn ja wird alle deselektiert, wenn nein wird alles selektiert
+\end_layout
+
+\begin_layout Itemize
+das Grunddesign habe ich von w3school.com: https://www.w3schools.com/howto/howto_cs
+s_custom_checkbox.asp
+\end_layout
+
+\begin_layout Itemize
+des weiteren habe ich den Haupt div-container auf height: auto gesetzt damit
+ automatisch die Größe des div generiert wird und hab einen Farbverlauf
+ hinzugefügt damit man, wenn man viel nach unten scrollen kann, den div
+ von dem Hintergrund unterscheiden kann
+\end_layout
+
+\begin_layout Section
+16.01.2020
+\end_layout
+
+\begin_layout Itemize
+heute hab ich mich der Mannschaftsübersicht gewidmet die Fabian bereits
+ angefangen hat
+\end_layout
+
+\begin_layout Itemize
+Idee: Teaminformationen in einem Array haben, ähnlich wie bei den Ergebnissen
+ aufrufen, statt Name aber Team Logo anzeigen, welches angeklickt werden
+ kann um die Informationen aufzuklappen
+\end_layout
+
+\begin_layout Itemize
+letzten 5 Spiele des Teams sollen angezeigt werden
+\end_layout
+
+\begin_layout Itemize
+details for Schleife bleibt bestehen
+\end_layout
+
+\begin_layout Itemize
+in Summary kommt ein Bild wo in der 
+\begin_inset Quotes gld
+\end_inset
+
+src
+\begin_inset Quotes grd
+\end_inset
+
+ eine Funktion aufgerufen wird, der als Parameter der Teamname mitgegeben
+ wird
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<img :src="assetsPath(team.name)" />
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+assetPath gibt den Pfad für das Bild zurück für das jeweilige Team
+\end_layout
+
+\begin_layout Itemize
+die getData Funktion bekommt nun noch eine for Scheife, in der alle Mannschaftsd
+etails, der im Localstorage vorhandenen Teams, in das Array TDetails gepusht
+ werden
+\end_layout
+
+\begin_layout Itemize
+in v-for wird nun das TDetails ausgegeben
+\end_layout
+
+\begin_layout Itemize
+Mittels einer Tabelle hab ich die Informationen nun strukturiert
+\end_layout
+
+\begin_layout Itemize
+Das arbeiten mit Vue dringt nun langsam zu mir durch und mir fällt es einfacher
+ Lösungen für meine Probleme zu finde
+\end_layout
+
+\begin_layout Section
+20.01.2020
+\end_layout
+
+\begin_layout Itemize
+die Vorträge der Anderen hat uns gezeigt, dass wir noch ein bisschen Arbeit
+ vor uns haben und das unser Vortrag heute komplett ins leere gegangen wäre
+\end_layout
+
+\begin_layout Itemize
+gute Sache dass wir heute freiwillig entscheiden konnte ob wir vortragen
+ oder nicht, jetzt haben wir ein Bild wie es ungefähr aussehen kann
+\end_layout
+
+\begin_layout Itemize
+für die letzten 5 Spiele des Teams brauch ich noch ein v-for, allerdings
+ hab ich das nicht ganz realisiert bekommen alles gleich anzuzeigen, wenn
+ die Seite aufgerufen wird
+\end_layout
+
+\begin_layout Itemize
+hab also ein Button hinzugefügt der eine Funktion aufruft und den Teamnamen
+ übergeben bekommt
+\end_layout
+
+\begin_layout Itemize
+die Funktion kopiert dann aus dem Spieltag Array die Spiele des Teams in
+ ein neues Array
+\end_layout
+
+\begin_layout Itemize
+allerdings hat die Funktion dafür gesorgt, dass in jedem details die Spielergebn
+isse von nur einen Team aufgerufen wird
+\end_layout
+
+\begin_layout Itemize
+auf Nachfrage gab es dann eine deutlich bessere Variante:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<tr v-for="match in spieltag.filter(spieltag => team.name === spieltag.team1
+ || team.name === spieltag.team2).slice(0, 5)" :key="match">
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+die filter() Funktion filtert nun aus unserem Spieltag Array die Spiele
+ raus, in denen unser gesuchtes Team vorkommt
+\end_layout
+
+\begin_layout Itemize
+die slice() Funktion hab ich noch hinzugefügt um die Ausgabe des Arrays
+ auf 5 Spiele zu begrenzen
+\end_layout
+
+\begin_layout Itemize
+Danke für den kranken Tipp auf jeden Fall Christoph, war eine sehr große
+ Hilfe
+\end_layout
+
+\begin_layout Itemize
+jetzt hatte ich noch die Idee die Spiele je nach Sieg oder Niederlage einzufärbe
+n
+\end_layout
+
+\begin_layout Itemize
+zuerst hab ich ein v-if nach dem v-for probiert aber dadurch lass ich nur
+ meine Spiele nicht mehr anzeigen
+\end_layout
+
+\begin_layout Itemize
+dann hab ich probiert eine Funktion zu schreiben die die Klasse der Zeile
+ ändert je nach wer mehr Tore hatte, aber das hat alle Spiele gefärbt
+\end_layout
+
+\begin_layout Itemize
+hab auf Stackoverflow gefragt wie es funktionieren könnte
+\end_layout
+
+\begin_layout Itemize
+Antwort: 
+\begin_inset Quotes gld
+\end_inset
+
+You can create a computed property based on history and determine the theme
+ inside that.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data() {
+\end_layout
+
+\begin_layout Plain Layout
+
+ return {
+\end_layout
+
+\begin_layout Plain Layout
+
+  history: []
+\end_layout
+
+\begin_layout Plain Layout
+
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+},
+\end_layout
+
+\begin_layout Plain Layout
+
+ computed: {
+\end_layout
+
+\begin_layout Plain Layout
+
+  themedHistory () {
+\end_layout
+
+\begin_layout Plain Layout
+
+   this.history.map(item => {
+\end_layout
+
+\begin_layout Plain Layout
+
+    // determine the theme based on the item
+\end_layout
+
+\begin_layout Plain Layout
+
+    // const theme = ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    return {
+\end_layout
+
+\begin_layout Plain Layout
+
+     ...item,
+\end_layout
+
+\begin_layout Plain Layout
+
+     theme
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+   }
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+ }
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+<tr :class="match.theme" v-for="match in themedHistory" :key="match.id">
+\end_layout
+
+\begin_layout Plain Layout
+
+ ...
+\end_layout
+
+\begin_layout Plain Layout
+
+</tr>
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Ich konnte es aber nicht für meinen Fall umcoden deswegen hab ich es erstmal
+ sein lassen
+\end_layout
+
+\begin_layout Section
+21.01.2020
+\end_layout
+
+\begin_layout Itemize
+hab einen neuen Lösungsansatz: Ich färb einfach die Tabellenzellen ein,
+ in der sich das Team entsprechende Team befindet
+\end_layout
+
+\begin_layout Itemize
+ich hab dafür einige <td v-if> benutzt um sie in einer Farbe darzustellen
+ oder auf Standart zu lassen
+\end_layout
+
+\begin_layout Itemize
+gibt bestimmt bessere Alternativen, aber es löst erstmal mein Probleme
+\end_layout
+
+\begin_layout Itemize
+jetzt widme ich mich noch der Tabelle, die die Bundesliga anzeigen soll
+\end_layout
+
 \end_body
 \end_document

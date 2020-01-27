@@ -75,7 +75,7 @@
         name="checkbox"
         value="SC Freiburg"
       />
-       <img src="images/SC Freiburg.png" style="width:20px; height:20px;" />
+      <img src="images/SC Freiburg.png" style="width:20px; height:20px;" />
       <span class="checkmark"></span>
     </label>
     <label class="container" for="TSG 1899 Hoffenheim">

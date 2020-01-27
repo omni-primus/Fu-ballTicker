@@ -1,7 +1,8 @@
 <template>
   <div class="Home">
-    <h1>Fußball Ticker App</h1>
+    <h1>Fußball Ticker</h1>
     <div v-if="Seitenindex === 1" id="selection">
+      <h2>Wähle deine Teams aus:</h2>
       <img id="bund-img" src="images/bundesliga-banner.png" @click="open" />
       <details id="bundesliga">
         <summary></summary>
@@ -30,6 +31,7 @@
         Zur Liga-Tabelle
       </button>
       <div id="matchresult">
+        <h2 style="margin-top:120px;">Spielergebnisse:</h2>
         <table id="match">
           <thead>
             <tr style="background-color: #4A4A4A;">
@@ -196,9 +198,14 @@
           <th>Tore</th>
           <th>Diff</th>
         </tr>
-        <tr v-for="(tabelle, index) in Punkte" :key="tabelle">
+        <tr
+          v-for="(tabelle, index) in Punkte"
+          :key="index"
+          :class="inArray(tabelle.name, wahl) ? 'greenbg' : ''"
+        >
           <td>{{ index + 1 }}</td>
           <td>{{ tabelle.name }}</td>
+          <!--<td v-else>{{ tabelle.name }}</td> -->
           <td>{{ tabelle.Punkte }}</td>
           <td>{{ tabelle.Spiele }}</td>
           <td>{{ tabelle.Siege }}</td>
@@ -1478,6 +1485,12 @@ export default {
           return b.Dif - a.Dif;
         });
       }
+    },
+    inArray: function(team, array) {
+      for (var i = 0; i < array.length; i++) {
+        if (array[i] == team) return true;
+      }
+      return false;
     }
   }
 };
@@ -1622,8 +1635,12 @@ td.draw {
   font-size: 20px;
 }
 
-#bundestabelle th{
+#bundestabelle th {
   font-size: 10px;
   color: rgb(106, 255, 113);
+}
+
+.greenbg {
+  background-color: rgb(0, 134, 7);
 }
 </style>

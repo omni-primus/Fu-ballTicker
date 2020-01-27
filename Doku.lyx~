@@ -291,7 +291,7 @@ none
 
 \begin_layout Plain Layout
 
-	<p>Text</p>
+ <p>Text</p>
 \end_layout
 
 \begin_layout Plain Layout
@@ -316,142 +316,142 @@ methods: {
 
 \begin_layout Plain Layout
 
-	GetCookie: function(name){
+ GetCookie: function(name){
 \end_layout
 
 \begin_layout Plain Layout
 
-		var arg = name + "=";
+  var arg = name + "=";
 \end_layout
 
 \begin_layout Plain Layout
 
-		var alen = arg.length;
+  var alen = arg.length;
 \end_layout
 
 \begin_layout Plain Layout
 
-        var clen = document.cookie.length;
+  var clen = document.cookie.length;
 \end_layout
 
 \begin_layout Plain Layout
 
-        var i = 0;
+  var i = 0;
 \end_layout
 
 \begin_layout Plain Layout
 
-        while (i < clen) {
+  while (i < clen) {
 \end_layout
 
 \begin_layout Plain Layout
 
-            var j = i + alen;
+   var j = i + alen;
 \end_layout
 
 \begin_layout Plain Layout
 
-               if (document.cookie.substring(i, j) == arg)
+   if (document.cookie.substring(i, j) == arg)
 \end_layout
 
 \begin_layout Plain Layout
 
-                    return "here";
+    return "here";
 \end_layout
 
 \begin_layout Plain Layout
 
-                i = document.cookie.indexOf(" ", i) + 1;
+   i = document.cookie.indexOf(" ", i) + 1;
 \end_layout
 
 \begin_layout Plain Layout
 
-                if (i == 0)
+   if (i == 0)
 \end_layout
 
 \begin_layout Plain Layout
 
-                     break;
+    break;
 \end_layout
 
 \begin_layout Plain Layout
 
-        }
+  }
 \end_layout
 
 \begin_layout Plain Layout
 
-        return null;
+  return null;
 \end_layout
 
 \begin_layout Plain Layout
 
-	}
+ }
 \end_layout
 
 \begin_layout Plain Layout
 
-	showfirst: function(){
+ showfirst: function(){
 \end_layout
 
 \begin_layout Plain Layout
 
-		let erster = document.getElementById("#erster");
+  let erster = document.getElementById("#erster");
 \end_layout
 
 \begin_layout Plain Layout
 
-	    erster.style.display = "inline";
+  erster.style.display = "inline";
 \end_layout
 
 \begin_layout Plain Layout
 
-	}
+ }
 \end_layout
 
 \begin_layout Plain Layout
 
-	beforeMount: function(){
+ beforeMount: function(){
 \end_layout
 
 \begin_layout Plain Layout
 
-		let visit = GetCookie("COOKIE1");
+  let visit = GetCookie("COOKIE1");
 \end_layout
 
 \begin_layout Plain Layout
 
-		if (visit == null){
+  if (visit == null){
 \end_layout
 
 \begin_layout Plain Layout
 
-        	showfirst();
+   showfirst();
 \end_layout
 
 \begin_layout Plain Layout
 
-		}
+  }
 \end_layout
 
 \begin_layout Plain Layout
 
-	    let expire=new Date();
+  let expire=new Date();
 \end_layout
 
 \begin_layout Plain Layout
 
-	    expire = new Date(expire.getTime() + 7776000000);
+  expire = new Date(expire.getTime() + 7776000000);
 \end_layout
 
 \begin_layout Plain Layout
 
-	    document.cookie="COOKIE1=here; expires=" + expire;
+  document.cookie="COOKIE1=here; expires=" + expire;
 \end_layout
 
 \begin_layout Plain Layout
 
-	}
+ }
 \end_layout
 
 \begin_layout Plain Layout
@@ -548,8 +548,27 @@ status open
 
 \begin_layout Plain Layout
 
-<script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/
-gsap/2.1.3/TweenMax.min.js" ></script>
+<script
+\end_layout
+
+\begin_layout Plain Layout
+
+ type="application/javascript"
+\end_layout
+
+\begin_layout Plain Layout
+
+ src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+\end_layout
+
+\begin_layout Plain Layout
+
+>
+\end_layout
+
+\begin_layout Plain Layout
+
+</script>
 \end_layout
 
 \end_inset
@@ -569,7 +588,7 @@ mounted(){
 
 \begin_layout Plain Layout
 
-	let scripts = document.createElement(
+ let scripts = document.createElement(
 \begin_inset Quotes eld
 \end_inset
 
@@ -582,7 +601,12 @@ script
 
 \begin_layout Plain Layout
 
-	scripts.setAttribute(
+ scripts.setAttribute(
+\end_layout
+
+\begin_layout Plain Layout
+
+  
 \begin_inset Quotes eld
 \end_inset
 
@@ -590,12 +614,26 @@ src
 \begin_inset Quotes erd
 \end_inset
 
-,"https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js");
+,
 \end_layout
 
 \begin_layout Plain Layout
 
-	document.head.appendChild(scripts);
+  
+\begin_inset Quotes eld
+\end_inset
+
+https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+\end_layout
+
+\begin_layout Plain Layout
+
+ );
+\end_layout
+
+\begin_layout Plain Layout
+
+ document.head.appendChild(scripts);
 \end_layout
 
 \begin_layout Plain Layout
@@ -623,8 +661,7 @@ status open
 
 \begin_layout Plain Layout
 
-npm install --save "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js?
-vue&type=script&lang=js"
+npm install --save "https://cdnjs[...].js?vue&type=script&lang=js"
 \end_layout
 
 \end_inset
@@ -648,52 +685,57 @@ SomeComponent: () => {
 
 \begin_layout Plain Layout
 
-	let vm = this;
+ let vm = this;
 \end_layout
 
 \begin_layout Plain Layout
 
-	return new Promise((resolve, reject) => {
+ return new Promise((resolve, reject) => {
 \end_layout
 
 \begin_layout Plain Layout
 
-	let script = document.createElement("script");
+  let script = document.createElement("script");
 \end_layout
 
 \begin_layout Plain Layout
 
-	script.onload = () => {
+  script.onload = () => {
 \end_layout
 
 \begin_layout Plain Layout
 
-		resolve(import(SomeComponent));
+   resolve(import(SomeComponent));
 \end_layout
 
 \begin_layout Plain Layout
 
-		script.async = true;
+   script.async = true;
 \end_layout
 
 \begin_layout Plain Layout
 
-		script.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js";
+   script.src = 
 \end_layout
 
 \begin_layout Plain Layout
 
-		document.head.appendChild(script);
+    "https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js";
 \end_layout
 
 \begin_layout Plain Layout
 
-		};
+   document.head.appendChild(script);
 \end_layout
 
 \begin_layout Plain Layout
 
-	})
+  };
+\end_layout
+
+\begin_layout Plain Layout
+
+ })
 \end_layout
 
 \begin_layout Plain Layout
@@ -726,168 +768,168 @@ knopf: function(event) {
 
 \begin_layout Plain Layout
 
-	let duration = 3000, 
+ let duration = 3000, 
 \end_layout
 
 \begin_layout Plain Layout
 
-	btn = event.target,
+ btn = event.target,
 \end_layout
 
 \begin_layout Plain Layout
 
-	svg = btn.find("svg"),
+ svg = btn.find("svg"),
 \end_layout
 
 \begin_layout Plain Layout
 
-	svgPath = new Proxy( {
+ svgPath = new Proxy( {
 \end_layout
 
 \begin_layout Plain Layout
 
-		y: null,
+  y: null,
 \end_layout
 
 \begin_layout Plain Layout
 
-		smoothing: null
+  smoothing: null
 \end_layout
 
 \begin_layout Plain Layout
 
-	},
+ },
 \end_layout
 
 \begin_layout Plain Layout
 
-	{
+ {
 \end_layout
 
 \begin_layout Plain Layout
 
-		set(target, key, value) {
+  set(target, key, value) {
 \end_layout
 
 \begin_layout Plain Layout
 
-			target[key] = value;
+   target[key] = value;
 \end_layout
 
 \begin_layout Plain Layout
 
-			if (target.y !== null && target.smoothing !== null) {
+   if (target.y !== null && target.smoothing !== null) {
 \end_layout
 
 \begin_layout Plain Layout
 
-				svg.html(getPath(target.y, target.smoothing, null));
+    svg.html(getPath(target.y, target.smoothing, null));
 \end_layout
 
 \begin_layout Plain Layout
 
-			}
+   }
 \end_layout
 
 \begin_layout Plain Layout
 
-			return true;
+   return true;
 \end_layout
 
 \begin_layout Plain Layout
 
-		},
+  },
 \end_layout
 
 \begin_layout Plain Layout
 
-		get(target, key) {
+  get(target, key) {
 \end_layout
 
 \begin_layout Plain Layout
 
-			return target[key];
+   return target[key];
 \end_layout
 
 \begin_layout Plain Layout
 
-		}
+  }
 \end_layout
 
 \begin_layout Plain Layout
 
-	});
+ });
 \end_layout
 
 \begin_layout Plain Layout
 
-	btn.css("--duration", duration);
+ btn.css("--duration", duration);
 \end_layout
 
 \begin_layout Plain Layout
 
-	svgPath.y = 20;
+ svgPath.y = 20;
 \end_layout
 
 \begin_layout Plain Layout
 
-	svgPath.smoothing = 0;
+ svgPath.smoothing = 0;
 \end_layout
 
 \begin_layout Plain Layout
 
-	if (event) { 
+ if (event) { 
 \end_layout
 
 \begin_layout Plain Layout
 
-		if (!btn.hasClass("loading")) {
+  if (!btn.hasClass("loading")) {
 \end_layout
 
 \begin_layout Plain Layout
 
-			btn.addClass("loading");
+   btn.addClass("loading");
 \end_layout
 
 \begin_layout Plain Layout
 
-			TweenMax.to(svgPath, (duration * 0.065) / 1000, { smoothing: 0.3});
+   TweenMax.to(svgPath, (duration * 0.065) / 1000, { smoothing: 0.3});
 \end_layout
 
 \begin_layout Plain Layout
 
-			TweenMax.to(svgPath, (duration * 0.265) / 1000, { 
+   TweenMax.to(svgPath, (duration * 0.265) / 1000, { 
 \end_layout
 
 \begin_layout Plain Layout
 
-				y: 12, ease: Elastic.easeOut.config(1.12, 0.4)}).delay((duration * 0.065)
+    y: 12, ease: Elastic.easeOut.config(1.12, 0.4)}).delay((duration * 0.065)
  / 1000);
 \end_layout
 
 \begin_layout Plain Layout
 
-				setTimeout(() => { svg.html(getPath(0, 0, [[3, 14], [8, 19], [21, 6]]));
+	setTimeout(() => { svg.html(getPath(0, 0, [[3, 14], [8, 19], [21, 6]]));
 \end_layout
 
 \begin_layout Plain Layout
 
-			}, duration / 2);
+   }, duration / 2);
 \end_layout
 
 \begin_layout Plain Layout
 
-		}
+  }
 \end_layout
 
 \begin_layout Plain Layout
 
-		return false;
+  return false;
 \end_layout
 
 \begin_layout Plain Layout
 
-	}
+ }
 \end_layout
 
 \begin_layout Plain Layout
@@ -1253,6 +1295,103 @@ Grundidee:
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+nach einiger Zeit hatte ich dann 2 Funktionen
+\end_layout
+
+\begin_layout Itemize
+eine die beim drücken eines Knopfes die gecheckten Boxen in den Localstorage
+ tut
+\end_layout
+
+\begin_layout Itemize
+eine die die Spiele aus dem Spieltag Array mit dem Localstorage vergleicht
+ und die gefunden Spiele in das Ergebnis Array kopiert
+\end_layout
+
+\begin_layout Itemize
+nach einigem Bugfixing hat das auch funktioniert
+\end_layout
+
+\begin_layout Itemize
+bin sehr zufrieden mit dem Tag, da ich im Grunde das komplette Projekt in
+ einem Tag komplett geändert habe
+\end_layout
+
+\begin_layout Itemize
+für 5 Teams kann man nun die jeweiligen Spiele anzeigen
+\end_layout
+
+\begin_layout Section
+08.01.2020
+\end_layout
+
+\begin_layout Itemize
+Design Aufbesserung: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Hintergrundbild
+\end_layout
+
+\begin_layout Itemize
+responsive Design
+\end_layout
+
+\begin_layout Itemize
+Banner zum Auklappen einer Liga
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+jetzt kann man sich die App angucken ohne Fremdscham spüren zu müssen
+\end_layout
+
+\begin_layout Itemize
+Bugfixes: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Tabelle wird erst gelöscht, wenn neue Teamauswahl getroffen um alte Tabelle
+ erst los zu werden
+\end_layout
+
+\begin_layout Itemize
+Neu laden der Seite bei vorhandenen Teams im Local Storage sorgt dafür das
+ man bei der Tabelle bleibt mit seinen Teams
+\end_layout
+
+\end_deeper
+\begin_layout Section
+13.01.2020
+\end_layout
+
+\begin_layout Itemize
+Checkbox Design überarbeitet
+\end_layout
+
+\begin_layout Itemize
+Button hinzugefügt womit man alle Teams auswählen oder auch entfernen kann
+ -> Nutzerfreundlichkeit
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Bilder/Checkboxen.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+dafür habe ich eine Funktion geschrieben, die erst guckt ob etwas ausgewählt
+ ist, wenn ja wird alle deselektiert, wenn nein wird alles selektiert 
 \end_layout
 
 \end_body
